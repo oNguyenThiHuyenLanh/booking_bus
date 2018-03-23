@@ -11,10 +11,17 @@ gem "puma", "~> 3.7"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
 gem "paranoia"
+gem "select2-rails"
+gem "bootstrap-sass"
+gem "jquery-rails"
+gem "bootstrap-datepicker-rails"
 
 gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.5"
+gem "byebug"
+gem "font-awesome-sass", "~> 5.0.6"
+gem "i18n-js"
 
 group :development, :test do
   gem "pry"
@@ -23,7 +30,7 @@ group :development, :test do
   gem "rspec"
   gem "rspec-rails"
   gem "rspec-collection_matchers"
-  gem "factory_girl_rails"
+  gem "factory_bot_rails"
   gem "better_errors"
   gem "guard-rspec", require: false
   gem "database_cleaner"

@@ -1,0 +1,17 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to t("app_name"), "#", class: "logo" %>
+    <nav>
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to t("home_page"), "#" %></li>
+        <li><%= link_to t("payment"), "#" %></li>
+        <li><%= link_to t("guide"), "#" %></li>
+        <li><%= link_to t("contact"), "#" %></li>
+        <li><%= link_to t("login"), "#",
+          data: {toggle: "modal", target: "#login"} %></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<%= render "layouts/modal" %>
