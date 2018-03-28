@@ -10,6 +10,7 @@ gem "mysql2"
 gem "puma", "~> 3.7"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
+gem "paranoia"
 
 gem "coffee-rails", "~> 4.2"
 gem "turbolinks", "~> 5"
