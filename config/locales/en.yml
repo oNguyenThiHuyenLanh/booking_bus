@@ -1,33 +1,61 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  app_name: "Ticket Booking"
+  home_page: "Home"
+  payment: "Payment"
+  guide: "Guide"
+  contact: "Contact"
+  title: "Book car tickets online"
+  footer_title_left: "Booking system online"
+  footer_title_right: "Senior passenger car company"
+  login: "Login"
+  signup: "Sign up"
+  logout: "Logout"
+  forget_password: "Forget password?"
+  password: "Password"
+  password_retrieval: "Password retrieval"
+  account_exist: "Have an account?"
+  password_confirmation: "Password confirmation"
+  remember_me: "Remember me"
+  email: "Email"
+  search: "Search"
+  origin_address: "Origin address"
+  destination_address: "Destination address"
+  date_of_department: "Date of department"
+  interval: "Interval"
+  routes: "Routes"
+  route:
+    route1: "Quốc lộ 1"
+    route2: "Đường Hồ Chí Minh"
+  start-point: "Start station"
+  final-point: "Final station"
+  morning: "Morning (0h-12h)"
+  afternoon: "Afternoon (12h-19h)"
+  night: "Night (19h-24h)"
+  take-hour: "Take"
+  hour: "h"
+  floor_1: "1st floor"
+  floor_2: "2nd floor"
+  how-to-select-seats: "Click to select a seat and click again to deselect"
+  selected-seat: "Selected seat"
+  booked-seat: "Booked seat"
+  total-price: "Total price"
+  continue: "Continue"
+  confirm_booking: "Confirm booking"
+  note: "Note"
+  fillout-info-title: "Quý khách vui lòng điền chính xác điện thoại,
+    họ tên, email(nếu có) của hành khách đi xe"
+  phone-number: "Phone number"
+  fullname: "Fullname"
+  payment-by-card: "Payment by card"
+  postpaid: "Postpaid"
+  agree-rule: "I agree with the rules of"
+  list-of-seat: "List of seats"
+  start-time: "Start time"
+  coupon-code: "Coupon code"
+  have-to-pay: "Have to pay"
+  select-origin-address: "Select origin address"
+  select-destination-address: "Select destination address"
+  select-interval: "Select interval"
+  user-profile: "User profile"
+  booking-history: "Booking history"
+
