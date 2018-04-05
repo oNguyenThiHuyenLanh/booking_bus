@@ -493,7 +493,6 @@ User.create!(phone_number: "0944854132",
   # password: "anhquan96",
   admin: 0)
 
-
 Bill.create!(total_price: 0,
   total_ticket: 0,
   status: 1,
