@@ -61,14 +61,27 @@ vi:
   select-interval: "Chọn khung giờ"
   profile: "Thông tin người dùng"
   booking-history: "Lịch sử đặt vé"
+  select-seat: "Chọn chỗ"
+  booking: "Đặt vé"
+  no_data: "Không có dữ liệu"
+  slot: "chỗ"
+  day: "ngày"
+  remain: "Còn"
 
   date:
     formats:
-      date_month_year_concise: "%d-%m-%Y"
-      default: "%Y-%m-%d"
+      date_month_year_concise: "%d/%m/%Y"
+      default: "%Y/%m/%d"
       short: "%b %d"
       long: "%B %d, %Y"
+  time:
+    formats:
+      time_hour: "%H:%M"
   manage_pages: "Quản lý trang"
+  js:
+    date:
+      formats:
+        date_month_year: "dd/mm/yyyy"
 
   admin:
     layout:
@@ -162,3 +175,8 @@ vi:
   errors:
     messages:
       not_saved: "Không thể lưu"
+  number:
+    currency:
+      format:
+        format: "%n %u"
+        unit: "VND"

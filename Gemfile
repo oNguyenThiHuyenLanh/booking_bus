@@ -26,6 +26,7 @@ gem "i18n-js"
 gem "devise"
 gem "jquery-validation-rails"
 gem "bootstrap-select-rails"
+gem "config"
 
 group :development, :test do
   gem "pry"

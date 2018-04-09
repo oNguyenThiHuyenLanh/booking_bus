@@ -6,4 +6,11 @@ class Route < ApplicationRecord
 
   has_many :schedules
   has_many :pick_addresses, through: :route_pick_addresses
+
+  class << self
+    def find_routes origin_id, destination_id
+      Route.where(origin_id: origin_id,
+        destination_id: destination_id).pluck :id
+    end
+  end
 end

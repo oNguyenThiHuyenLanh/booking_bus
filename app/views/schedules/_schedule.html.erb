@@ -1,0 +1,68 @@
+<li class="row-table">
+  <div class="row">
+    <div class="col-md-2">
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-time">
+          </span>
+        </div>
+        <div class="col-md-9">
+          <div>
+            <span class="start-time"><%= schedule.time_start %></span>
+            <i class="fa fa-caret-right"></i>
+            <span class="end-time"><%= (schedule.time_start.to_time +
+              schedule.time_spent*60).strftime(t("time.formats.time_hour")) %></span>
+          </div>
+          <div class="dask-line"></div>
+          <p class="route"><%= t "take-hour" %> <%= schedule.time_spent/60 %>
+            <% t "hour" %></p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-md-1">
+          <span class="glyphicon glyphicon-home">
+          </span>
+        </div>
+        <div class="col-md-10">
+          <div>
+            <span class="start-time"><%= schedule.start.name %></span>
+            <i class="fa fa-caret-right"></i>
+            <span class="end-time"><%= schedule.final.name %></span>
+          </div>
+          <div>
+            <p class="route"><%= schedule.route.road.name %></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <div class="row">
+        <div class="col-md-2">
+          <span class="glyphicon glyphicon-user">
+          </span>
+        </div>
+        <div class="col-md-9">
+          <div>
+            <span class="start-time"><%= t "remain" %>
+              <%= schedule.empty_slot %>
+              <%= t "slot" %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <p class="price"><%= number_to_currency schedule.price,
+        dilimeter: "" %></p>
+    </div>
+    <div class="col-md-2">
+      <button class="btn btn-light book float-right"
+        data-schedule= "<%= schedule.id %>">
+        <%= t "select-seat" %>
+      </button>
+    </div>
+  </div>
+  <%= render "schedules/slot", schedule: schedule, first_floor: first_floor,
+    second_floor: second_floor %>
+</li>
