@@ -1,0 +1,291 @@
+.inline {
+  margin-top: 20px;
+}
+
+.arrow {
+  font-size: 30px;
+  padding: 20px 20px 0 30px;
+}
+
+.row-table {
+  border-top: 1px solid $gray-lighter;
+  line-height: 28px;
+  padding: 10px 0;
+}
+
+.list-seat {
+  background-color: $whisper;
+  border-top: 1px solid $gray-lighter;
+  display: none;
+  margin-top: 10px;
+  padding: 0;
+
+  .seat-padding label {
+    font-size: 13px;
+  }
+}
+
+.seat-type ul {
+  list-style-type: none;
+
+  li {
+    display: inline;
+    margin-left: 20px;
+  }
+}
+
+.selected {
+  background-color: $red;
+  border: 1px solid $black;
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+}
+
+.booked {
+  background-color: $black;
+  border: 1px solid $black;
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+}
+
+.seat-padding {
+  padding: 5px 45px;
+}
+
+.seat-wrap {
+  background-color: $white;
+  border: 1px solid $silver;
+  margin-bottom: 10px;
+  min-height: 84px;
+  padding: 9px;
+  position: relative;
+  text-align: center;
+
+  p {
+    font-size: 12px;
+    font-weight: 300;
+    margin: 10px 0;
+  }
+
+  ul li {
+    display: inline-block;
+    list-style-type: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .selected {
+    background-color: $red;
+  }
+}
+
+.lower-new {
+  font-size: 10px;
+  font-weight: bold;
+  left: 22px;
+  line-height: 12px;
+  position: absolute;
+  text-align: left;
+}
+
+.dropdown-align {
+  margin-left: 125px;
+  margin-right: 35px;
+}
+
+.dropdown-menu ul {
+  list-style-type: none;
+  padding: 10px 0 0 10px;
+
+  li {
+    margin: 5px 0;
+  }
+}
+
+.filter-tag {
+  margin-bottom: 15px;
+
+  .tag {
+    margin-right: 5px;
+  }
+
+  span:hover {
+    color: $red;
+    cursor: pointer;
+  }
+}
+
+.list-trip {
+  list-style-type: none;
+  padding: 0;
+
+  li .glyphicon {
+    font-size: 16px;
+  }
+}
+
+.selected-seat {
+  color: $red;
+  margin-right: 5px;
+}
+
+.seat-inline2 {
+  margin-top: 10px;
+}
+
+.seat-location {
+  border: 1px solid $red;
+  display: inline;
+  height: 28px;
+  list-style-type: none;
+  margin: 3px 3px 0 0;
+  width: 35px;
+}
+
+.seat-location-blank {
+  border: 1px solid $white;
+  display: inline;
+  height: 28px;
+  list-style-type: none;
+  margin: 3px 3px 0 0;
+  width: 35px;
+}
+
+.bill ul {
+  padding: 0;
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.date-span {
+  background: none repeat scroll 0 0 $grey;
+  color: $white;
+  margin-right: 5px;
+  padding: 2px 5px 2px 8px;
+
+  :hover {
+    color: $red;
+  }
+}
+
+.right-arrow {
+  color: $nobel;
+}
+
+.start-time,
+.end-time {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.dask-line {
+  border-bottom: 1px dashed;
+  margin-top: 0;
+}
+
+.dask-line2 {
+  border-bottom: 1px solid;
+  margin-top: 0;
+}
+
+.total-time,
+.route {
+  color: $nobel;
+  font-size: 12px;
+}
+
+.price {
+  color: $red;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+
+.detail-wrap {
+  margin-top: 5px;
+  padding: 5px 45px 5px 0;
+}
+
+.detail {
+  border-top: 1px solid $silver;
+  margin-top: 10px;
+  padding: 5px 45px 5px 0;
+}
+
+.detail2 {
+  border-top: 1px solid $silver;
+  margin-top: 10px;
+  padding-top: 15px;
+}
+
+.dropbtn {
+  background-color: $fruit-salad;
+  border: 0;
+  color: $white;
+  font-size: 16px;
+  padding: 16px;
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative;
+
+  &:hover .dropbtn {
+    background-color: $fruit-salad;
+  }
+
+  &:hover .dropdown-content {
+    display: block;
+  }
+}
+
+.dropdown-content {
+  background-color: $white-smoke;
+  box-shadow: 0 8px 16px 0 $black;
+  display: none;
+  margin-left: 0;
+  min-width: 200px;
+  position: absolute;
+  z-index: 1;
+
+  a {
+    color: $black;
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $gainsboro;
+    }
+  }
+}
+
+.filter ul li {
+  float: left;
+  line-height: 30px;
+  padding: 8px;
+  padding-right: 16px;
+  width: auto;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.li-hover:hover show {
+  display: block;
+}

@@ -1,0 +1,76 @@
+.confirm-title {
+  font-size: 25px;
+}
+
+.confirm-left {
+  border: 1px solid $silver;
+
+  .customer-info {
+    margin: 0 20px;
+  }
+
+  .intro {
+    margin: 15px 20px;
+
+    p {
+      line-height: 17px;
+    }
+  }
+}
+
+.payment-method {
+  margin: 10px 20px 0 0;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      margin: 20px 0 0;
+    }
+  }
+}
+
+.note {
+  p {
+    font-weight: bold;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      font-style: italic;
+    }
+  }
+}
+
+
+.info-wrap {
+  margin-bottom: 10px;
+}
+
+.info {
+  padding: 0 7px;
+}
+
+.confirm-right-top {
+  border: 1px solid $silver;
+  padding: 10px;
+}
+
+.confirm-right-bottom {
+  border: 1px solid $silver;
+  margin-top: 15px;
+  padding: 10px;
+
+  hr {
+    margin: 3px 0 5px;
+  }
+}
+
+.confirm-right-top,
+.confirm-right-bottom .info-wrap span {
+  font-weight: bold;
+}
