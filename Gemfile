@@ -23,6 +23,7 @@ gem "jbuilder", "~> 2.5"
 gem "byebug"
 gem "font-awesome-sass", "~> 5.0.6"
 gem "i18n-js"
+gem "devise"
 
 group :development, :test do
   gem "pry"
