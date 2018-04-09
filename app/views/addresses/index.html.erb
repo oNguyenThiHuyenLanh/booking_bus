@@ -1,0 +1,60 @@
+<h4><%= t "title" %></h4>
+<hr>
+<% if @addresses %>
+  <div class="form-booking">
+    <div class="row">
+      <div class="col-md-9 form">
+        <%= form_for :search, method: "post", html: {id: "search_form"},
+          remote: true do |f| %>
+          <div class="row inline">
+            <div class="col-md-4">
+              <%= f.label :origin_address, t("origin_address") %>
+              <div>
+                <%= f.select "origin_address", 
+                  options_from_collection_for_select(@addresses, "id", "city"),
+                  {include_blank: true},
+                  {class: "select-custom", id: "origin_address"} %>
+              </div>
+            </div>
+            <div class="col-md-2">
+              <i class="glyphicon glyphicon-transfer icon"></i>
+            </div>
+            <div class="col-md-4">
+              <%= f.label :destination, t("destination_address") %>
+              <div>
+                <%= f.select "destination_address", 
+                  options_from_collection_for_select(@addresses, "id", "city"),
+                  {include_blank: true},
+                  {class: "select-custom", id: "destination_address"} %>
+              </div>
+            </div>
+          </div>
+          <div class="row inline">
+            <div class="col-md-4">
+              <%= f.label :date, t("date_of_department") %>
+                <div class="input-group">
+                  <%= f.text_field "date", class: "form-control",
+                    data: {provide: "datepicker"}, id: "date" %>
+                </div>
+            </div>
+            <div class="col-md-offset-2 col-md-4">
+              <%= f.label :interval, t("interval") %>
+              <div>
+                <%= f.select "interval",
+                  options_for_select({t("morning") => "1",
+                    t("afternoon") => "2", t("night") => "3"}),
+                    {include_blank: true}, {class: "select-custom", id: "interval"} %>
+              </div>
+            </div>
+          </div>
+          <div class="row inline">
+            <div class="col-md-offset-6 col-md-4">
+              <%= f.submit t("search"),
+                {class: "btn btn-primary select-custom"} %>
+            </div>
+          </div>
+        <% end %>      
+      </div>
+    </div>
+  </div>
+<% end %>
