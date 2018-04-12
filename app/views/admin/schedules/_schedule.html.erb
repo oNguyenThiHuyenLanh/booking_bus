@@ -1,0 +1,17 @@
+<tr class=<%= (schedule.date <= Date.current) ? "danger" : "success" %>>
+  <th scope="row"><%= schedule_counter + 1 %></th>
+  <td><%= schedule.route.origin.city %></td>
+  <td><%= schedule.route.destination.city %></td>
+  <td><%= l schedule.date, format: :date_month_year_concise %></td>
+  <td><%= schedule.time_start %></td>
+  <td><%= schedule.time_spent/60 %><%= t "admin.schedule.table.hour" %></td>
+  <td><%= schedule.price %></td>
+  <td><%= schedule.date <= Date.current ? t("admin.schedule.status.done") :
+    t("admin.schedule.status.doing") %></td>
+  <td>
+    <button type="button" class="btn btn-warning btn-circle"><i class="fa fa-edit"></i>
+    </button>
+    <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i>
+    </button>
+  </td>
+</tr>

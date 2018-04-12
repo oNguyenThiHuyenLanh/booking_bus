@@ -106,12 +106,12 @@ Route.create!(origin_id: 2,
   destination_id: 1,
   road_id: 1)
 
-Route.create!(origin_id: 1,
+Route.create!(origin_id: 3,
   destination_id: 2,
   road_id: 2)
 
 Route.create!(origin_id: 2,
-  destination_id: 1,
+  destination_id: 3,
   road_id: 2)
 
 Route.create!(origin_id: 1,
@@ -293,7 +293,7 @@ Interval.create!(name: "Tối (19h")
 
 
 Schedule.create!(price: 300000,
-  date: Date.parse("05/10/2018"),
+  date: Date.parse("15/05/2018"),
   time_start: "8:00",
   time_spent: 300,
   bus_id: 1,
@@ -303,7 +303,7 @@ Schedule.create!(price: 300000,
   final_station_id: 6)
 
 Schedule.create!(price: 300000,
-  date: Date.parse("05/10/2018"),  
+  date: Date.parse("15/05/2018"),  
   time_start: "13:30",
   time_spent: 300,
   bus_id: 1,
@@ -327,7 +327,7 @@ Schedule.create!(price: 300000,
   time_start: "13:30",
   time_spent: 300,
   bus_id: 2,
-  route_id: 3,
+  route_id: 4,
   interval_id: 2,
   start_station_id: 6,
   final_station_id: 1)
@@ -453,7 +453,7 @@ Schedule.create!(price: 160000,
   final_station_id: 2)
 
 Schedule.create!(price: 160000,
-  date: Date.parse("06/10/2018"),
+  date: Date.parse("06/04/2018"),
   time_start: "8:00",
   time_spent: 300,
   bus_id: 2,
@@ -463,7 +463,7 @@ Schedule.create!(price: 160000,
   final_station_id: 12)
 
 Schedule.create!(price: 160000,
-  date: Date.parse("06/10/2018"),
+  date: Date.parse("06/04/2018"),
   time_start: "13:30",
   time_spent: 300,
   bus_id: 2,

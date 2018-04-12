@@ -15,6 +15,7 @@
 //= require bootstrap-sprockets
 //= require rails-ujs
 //= require turbolinks
+//= require bootstrap-select
 //= require_tree .
 
 document.addEventListener("turbolinks:load", function() {

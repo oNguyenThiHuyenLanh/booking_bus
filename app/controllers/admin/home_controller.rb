@@ -1,6 +1,5 @@
 module Admin
-  class HomeController < ApplicationController
-    layout "application_admin"
+  class HomeController < BaseController
     def show; end
   end
 end

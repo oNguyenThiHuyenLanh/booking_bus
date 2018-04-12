@@ -25,6 +25,7 @@ gem "font-awesome-sass", "~> 5.0.6"
 gem "i18n-js"
 gem "devise"
 gem "jquery-validation-rails"
+gem "bootstrap-select-rails"
 
 group :development, :test do
   gem "pry"
