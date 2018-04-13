@@ -1,0 +1,62 @@
+<div class="navbar-default sidebar" role="navigation">
+  <div class="sidebar-nav navbar-collapse">
+    <ul class="nav" id="side-menu">
+      <li class="sidebar-search">
+        <div class="input-group custom-search-form">
+          <input type="text" class="form-control"
+            placeholder=<%= t("admin.layout.search") %>>
+          <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <i class="fa fa-search"></i>
+          </button>
+          </span>
+        </div>
+      </li>
+      <li>
+        <%= link_to "#" do%>
+          <i class="fa fa-dashboard fa-fw"></i>
+          <%= t "admin.sidebar.dashboard" %>
+        <% end %>
+      </li>
+      <li>
+        <%= dropdown_link("#bus", "fa fa-wrench fa-fw", "bus") %>
+        <ul class="nav nav-second-level collapse" id="bus">
+          <li>
+            <%= link_to t("admin.sidebar.showBus"), "javascript:;" %>
+          </li>
+          <li>
+            <%= link_to t("admin.sidebar.addBus"), "javascript:;" %>
+          </li>
+          <li>
+            <%= link_to t("admin.sidebar.statistic"), "javascript:;" %>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <%= dropdown_link("#schedule", "fa fa-wrench fa-fw", "schedule") %>
+        <ul class="nav nav-second-level collapse" id="schedule">
+          <li>
+            <%= link_to t("admin.sidebar.showSchedule"), "javascript:;" %>
+          </li>
+          <li>
+            <%= link_to t("admin.sidebar.addSchedule"), "javascript:;" %>
+          </li>
+          <li>
+            <%= link_to t("admin.sidebar.statistic"), "javascript:;" %>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <%= dropdown_link("#statistic", "fa fa-bar-chart-o fa-fw", "statistic") %>
+        <ul class="nav nav-second-level collapse" id="statistic">
+          <li>
+            <%= link_to t("admin.sidebar.statisticSchedule"), "javascript:;" %>
+          </li>
+          <li>
+            <%= link_to t("admin.sidebar.statisticPassenger"), "javascript:;" %>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
