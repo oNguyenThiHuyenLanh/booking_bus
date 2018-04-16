@@ -138,7 +138,6 @@ Route.create!(origin_id: 5,
   destination_id: 1,
   road_id: 1)
 
-
 Route.create!(origin_id: 1,
   destination_id: 6,
   road_id: 2)
