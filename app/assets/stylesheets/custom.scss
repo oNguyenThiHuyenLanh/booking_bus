@@ -1,3 +1,5 @@
+@import './colors';
+
 .col-margin {
   margin-right: 10px;
 }
@@ -71,7 +73,7 @@ h1 {
 }
 
 h2 {
-  color: $gray-light;
+  color: $gray-lighter;
   font-size: 1.2em;
   font-weight: normal;
   letter-spacing: -1px;
@@ -107,15 +109,15 @@ p {
 
 footer {
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+  color: $gray-lighter;
   margin-top: 45px;
   padding-top: 5px;
 
   a {
-    color: $gray;
+    color: $matterhorn;
 
     &:hover {
-      color: $gray-darker;
+      color: $nero;
     }
   }
 }

@@ -1,4 +1,8 @@
 class PagesController < ApplicationController
+  def index
+    render template: "pages/home"
+  end
+
   def show
     page = page_param
     if valid_page?

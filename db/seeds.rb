@@ -473,24 +473,25 @@ Schedule.create!(price: 160000,
   final_station_id: 1)
 
 User.create!(phone_number: "0989390159",
-  # email: "a1k9lanh@gmail.com",
-  # password: "anhquan96",
+  email: "a1k9lanh@gmail.com",
+  password: "anhquan96",
   admin: 1)
 
 User.create!(phone_number: "0902228931",
-  # email: "lanh123@gmail.com",
-  # password: "anhquan96",
+  email: "lanh123@gmail.com",
+  password: "anhquan96",
   admin: 0)
 
 User.create!(phone_number: "0965273896",
-  # email: "nguyenleanhquan0@gmail.com",
-  # password: "anhquan96",
+  email: "nguyenleanhquan@gmail.com",
+  password: "anhquan96",
   admin: 1)
 
 User.create!(phone_number: "0944854132",
-  # email: "quannla@gmail.com",
-  # password: "anhquan96",
+  email: "quannla@gmail.com",
+  password: "anhquan96",
   admin: 0)
+
 
 Bill.create!(total_price: 0,
   total_ticket: 0,

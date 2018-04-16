@@ -78,3 +78,27 @@ en:
       addSchedule: "Add schedule"
       statisticSchedule: "Statistics schedule"
       statisticPassenger: "Statistics passenger"
+  devise:
+    failure:
+      user:
+        not_found_in_database: "Account dont exist"
+    sessions:
+      user:
+        signed_in: "Login successful"
+        signed_out: "Signed out successful"
+        already_signed_out: "Already signed out"
+    registrations:
+      user:
+        signed_up: "Signed up successful"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Can not be blank"
+            password:
+              blank: "Can not be blank"
+  errors:
+    messages:
+      not_saved: "Can not be saved"

@@ -58,8 +58,9 @@ vi:
   select-origin-address: "Chọn điểm bắt đầu"
   select-destination-address: "Chọn điểm đến"
   select-interval: "Chọn khung giờ"
-  user-profile: "Thông tin người dùng"
+  profile: "Thông tin người dùng"
   booking-history: "Lịch sử đặt vé"
+
 
   admin:
     layout:
@@ -80,3 +81,28 @@ vi:
       addSchedule: "Add schedule"
       statisticSchedule: "Statistics schedule"
       statisticPassenger: "Statistics passenger"
+
+  devise:
+    failure:
+      user:
+        not_found_in_database: "Không tìm thấy người dùng"
+    sessions:
+      user:
+        signed_in: "Đăng nhập thành công"
+        signed_out: "Đăng xuất"
+        already_signed_out: "Bạn đã đăng xuất"
+    registrations:
+      user:
+        signed_up: "Đăng kí thành công"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "Không được để trống"
+            password:
+              blank: "Không được để trống"
+  errors:
+    messages:
+      not_saved: "Không thể lưu"
