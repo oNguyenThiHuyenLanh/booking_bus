@@ -57,6 +57,7 @@ vi:
   have-to-pay: "Phải thanh toán"
   select-origin-address: "Chọn điểm bắt đầu"
   select-destination-address: "Chọn điểm đến"
+  select-date: "Chọn ngày"
   select-interval: "Chọn khung giờ"
   profile: "Thông tin người dùng"
   booking-history: "Lịch sử đặt vé"

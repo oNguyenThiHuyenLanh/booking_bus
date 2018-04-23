@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root to: "pages#index"
+  root to: "addresses#index"
   get "/pages/:page" => "pages#show"
 
   namespace :admin do

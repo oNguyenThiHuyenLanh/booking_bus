@@ -1,34 +1,20 @@
 $(document).ready(function() {
-  $('#e1').select2({
+  $('#origin_address').select2({
     placeholder: I18n.t('select-origin-address'),
     allowClear: true
   });
-  $('#e2').select2({
+
+  $('#destination_address').select2({
     placeholder: I18n.t('select-destination-address'),
     allowClear: true
   });
-  $('#e3').select2({
+
+  $('#interval').select2({
     placeholder: I18n.t('select-interval'),
     allowClear: true
   });
 
-  $('#datepicker').datepicker();
-
-  $('#signup_modal').click(function(){
-    $('#login').modal('hide');
-  });
-  
-  $('#login_modal').click(function(){
-    $('#signup').modal('hide');
-  });
-  
-  $('#forget_modal').click(function(){
-    $('#login').modal('hide');
-  });
-  
-  $('#login_modal2').click(function(){
-    $('#forget_password').modal('hide');
-  });
+  $('#date').datepicker({dateFormat: 'dd-mm-yyyy'});
 
   $('.seat-location').click(function(){
     $(this).toggleClass('selected');
