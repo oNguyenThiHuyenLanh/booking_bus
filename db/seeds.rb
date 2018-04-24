@@ -492,22 +492,115 @@ User.create!(phone_number: "0944854132",
   password: "anhquan96",
   admin: 0)
 
-
-Bill.create!(total_price: 0,
-  total_ticket: 0,
+Bill.create!(total_price: 100000,
+  total_ticket: 2,
   status: 1,
   user_id: 2)
 
-Bill.create!(total_price: 0,
-  total_ticket: 0,
-  status: 1,
-  user_id: 2)
-
-
-BookedSeat.create!(no_of_seat: 10,
+BookedSeat.create!(no_of_seat: 9,
   bill_id: 1,
   schedule_id: 1)
 
 BookedSeat.create!(no_of_seat: 10,
   bill_id: 1,
+  schedule_id: 1)
+
+Bill.create!(total_price: 200000,
+  total_ticket: 4,
+  status: 1,
+  user_id: 2)
+
+BookedSeat.create!(no_of_seat: 15,
+  bill_id: 2,
+  schedule_id: 1)
+
+BookedSeat.create!(no_of_seat: 16,
+  bill_id: 2,
+  schedule_id: 1)
+
+BookedSeat.create!(no_of_seat: 17,
+  bill_id: 2,
+  schedule_id: 1)
+
+BookedSeat.create!(no_of_seat: 18,
+  bill_id: 2,
+  schedule_id: 1)
+
+Bill.create!(total_price: 200000,
+  total_ticket: 2,
+  status: 0,
+  user_id: 2)
+BookedSeat.create!(no_of_seat: 8,
+  bill_id: 3,
+  schedule_id: 2)
+BookedSeat.create!(no_of_seat: 9,
+  bill_id: 3,
+  schedule_id: 2)
+
+Bill.create!(total_price: 50000,
+  total_ticket: 1,
+  status: 0,
+  user_id: 2)
+BookedSeat.create!(no_of_seat: 1,
+  bill_id: 4,
+  schedule_id: 2)
+
+Bill.create!(total_price: 50000,
+  total_ticket: 1,
+  status: 0,
+  user_id: 2)
+BookedSeat.create!(no_of_seat: 5,
+  bill_id: 5,
+  schedule_id: 2)
+
+Bill.create!(total_price: 100000,
+  total_ticket: 2,
+  status: 1,
+  user_id: 4)
+BookedSeat.create!(no_of_seat: 21,
+  bill_id: 6,
+  schedule_id: 1)
+BookedSeat.create!(no_of_seat: 22,
+  bill_id: 6,
+  schedule_id: 1)
+
+Bill.create!(total_price: 50000,
+  total_ticket: 1,
+  status: 1,
+  user_id: 4)
+BookedSeat.create!(no_of_seat: 6,
+  bill_id: 7,
+  schedule_id: 1)
+
+Bill.create!(total_price: 100000,
+  total_ticket: 2,
+  status: 0,
+  user_id: 4)
+BookedSeat.create!(no_of_seat: 6,
+  bill_id: 8,
+  schedule_id: 2)
+BookedSeat.create!(no_of_seat: 7,
+  bill_id: 8,
+  schedule_id: 2)
+
+Bill.create!(total_price: 150000,
+  total_ticket: 3,
+  status: 0,
+  user_id: 4)
+BookedSeat.create!(no_of_seat: 10,
+  bill_id: 9,
+  schedule_id: 2)
+BookedSeat.create!(no_of_seat: 11,
+  bill_id: 9,
+  schedule_id: 2)
+BookedSeat.create!(no_of_seat: 12,
+  bill_id: 9,
+  schedule_id: 2)
+
+Bill.create!(total_price: 50000,
+  total_ticket: 1,
+  status: 0,
+  user_id: 4)
+BookedSeat.create!(no_of_seat: 19,
+  bill_id: 10,
   schedule_id: 2)

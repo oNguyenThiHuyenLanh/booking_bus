@@ -19,41 +19,41 @@
         <% end %>
       </li>
       <li>
-        <%= dropdown_link("#bus", "fa fa-wrench fa-fw", "bus") %>
+        <%= dropdown_link("fa fa-wrench fa-fw", "bus", "disable_click") %>
         <ul class="nav nav-second-level collapse" id="bus">
           <li>
-            <%= link_to t("admin.sidebar.showBus"), "javascript:;" %>
+            <%= link_to t("admin.sidebar.showBus"), "#" %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.addBus"), "javascript:;" %>
+            <%= link_to t("admin.sidebar.addBus"), "#" %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.statistic"), "javascript:;" %>
+            <%= link_to t("admin.sidebar.statistic"), "#" %>
           </li>
         </ul>
       </li>
       <li>
-        <%= dropdown_link("#schedule", "fa fa-wrench fa-fw", "schedule") %>
+        <%= dropdown_link("fa fa-wrench fa-fw", "schedule", "disable_click") %>
         <ul class="nav nav-second-level collapse" id="schedule">
           <li>
-            <%= link_to t("admin.sidebar.showSchedule"), "javascript:;" %>
+            <%= link_to t("admin.sidebar.showSchedule"), admin_schedules_path %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.addSchedule"), "javascript:;" %>
+            <%= link_to t("admin.sidebar.addSchedule"), "#" %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.statistic"), "javascript:;" %>
+            <%= link_to t("admin.sidebar.statistic"), "#" %>
           </li>
         </ul>
       </li>
       <li>
-        <%= dropdown_link("#statistic", "fa fa-bar-chart-o fa-fw", "statistic") %>
+        <%= dropdown_link("fa fa-bar-chart-o fa-fw", "statistic", "disable_click") %>
         <ul class="nav nav-second-level collapse" id="statistic">
           <li>
-            <%= link_to t("admin.sidebar.statisticSchedule"), "javascript:;" %>
+            <%= link_to t("admin.sidebar.statisticSchedule"), "#" %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.statisticPassenger"), "javascript:;" %>
+            <%= link_to t("admin.sidebar.statisticPassenger"), "#" %>
           </li>
         </ul>
       </li>

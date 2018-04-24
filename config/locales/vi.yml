@@ -68,6 +68,7 @@ vi:
       default: "%Y-%m-%d"
       short: "%b %d"
       long: "%B %d, %Y"
+  manage_pages: "Quản lý trang"
 
   admin:
     layout:
@@ -77,6 +78,13 @@ vi:
       haeder_title: "Manage Page"
       profile: "Profile"
       search: "Search ..."
+      go_home: " Trở về trang chủ"
+      hi_admin: "Chào admin"
+    error:
+      invalid_schedule: "Không tìm thấy schedule!"
+    stt:
+      now: "ĐANG ĐI"
+      will_do: "SẮP ĐI"
     sidebar:
       dashboard: "Dashboard"
       bus: "Manage Bus"
@@ -95,13 +103,18 @@ vi:
       filter_by_route: "Lọc theo chặng đường"
       filter_by_road: "Lọc theo cung đường"
       filter_by_interval: "Lọc theo khung giờ"
-      add: "Thêm lịch trình"
+      add: " Thêm"
+      edit: " Sửa"
+      detail: " Chi tiết"
+      back: " Trở về"
+      add_schedule: "Add schedule"
       table:
         stt: "STT"
         origin: "Bến đi"
         destination: "Bến đến"
         date: "Ngày đi"
         time_start: "Giờ đi"
+        time_end: "Giờ đến"
         time_during: "Thời gian đi"
         hour: " tiếng"
         price: "Giá (vnd)"
@@ -109,7 +122,21 @@ vi:
         action: "Thao tác"
       status:
         doing: "Sắp đi/Đang đi"
-        done: "Đã đi"
+        done: "ĐÃ ĐI!"
+        now: "ĐANG ĐI"
+        will_do: "SẮP ĐI"
+      show:
+        title: "Thông tin chuyến đi:"
+        bus: "Tên xe ô tô: "
+        pick_address_origin: "ĐIểm đón: "
+        pick_address_destination: "ĐIểm trả: "
+        number_seated: "Số ghế đã đặt: "
+        number_seat: "Số ghế còn lại: "
+        origin: "ĐIỂM ĐẦU"
+        destination: "ĐIỂM CUỐI"
+        at: "Lúc: "
+        location: "Tại: "
+        detail_seated: "(Xem)"
 
   devise:
     failure:

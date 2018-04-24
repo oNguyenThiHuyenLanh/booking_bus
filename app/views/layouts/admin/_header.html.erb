@@ -11,10 +11,12 @@
   </div>
   <!-- /.navbar-top-links -->
   <ul class="nav navbar-top-links navbar-right">
-
+    <li>
+      <%= link_to t("admin.layout.go_home"), root_path,  class: "fa fa-step-backward" %>
+    </li>
     <li class="dropdown">
       <%= link_to "javascript:;", class: "dropdown-toggle", data: {toggle: "dropdown"} do %>
-        <i class="fa fa-user fa-fw"></i>
+        <i class="fa fa-user fa-fw"></i><%= t "admin.layout.hi_admin" %>
         <i class="fa fa-caret-down"></i>
       <% end %>
       <ul class="dropdown-menu">

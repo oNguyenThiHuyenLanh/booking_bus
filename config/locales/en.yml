@@ -65,6 +65,7 @@ en:
       default: "%Y-%m-%d"
       short: "%b %d"
       long: "%B %d, %Y"
+  manage_pages: "Manage pages"
 
   admin:
     layout:
@@ -74,6 +75,13 @@ en:
       haeder_title: "Manage Page"
       profile: "Profile"
       search: "Search ..."
+      go_home: " Go home"
+      hi_admin: "Hi admin"
+    error:
+      invalid_schedule: "Invalid schedule!"
+    stt:
+      now: "NOW"
+      will_do: "IN THE FUTURE" 
     sidebar:
       dashboard: "Dashboard"
       bus: "Manage Bus"
@@ -92,21 +100,41 @@ en:
       filter_by_route: "Filter by route"
       filter_by_road: "Filter by road"
       filter_by_interval: "Filter by interval"
-      add: "Add schedule"
+      add: " Add"
+      edit: " Edit"
+      detail: " Detail"
+      back: "Back"
+      add_schedule: "Add schedule"
       table:
         stt: "Index"
         origin: "Origin"
         destination: "Destination"
         date: "Date"
         time_start: "Time start"
+        time_end: "Time end"
         time_during: "Time during"
         hour: " hour"
         price: "Price (vnd)"
         stts: "Status"
         action: "action"
       status:
-        doing: "doing"
-        done: "done"
+        doing: "DOING"
+        done: "DONE"
+        now: "NOW"
+        will_do: "IN THE FUTURE"
+      show:
+        title: "Schedule detail: "
+        bus: "Bus name: "
+        pick_address_origin: "Pick address origin: "
+        pick_address_destination: "Pick address destination: "
+        number_seated: "Number of seated: "
+        number_seat: "Number of seat now: "
+        origin: "ORIGIN"
+        destination: "DESTINATION"
+        at: "at: "
+        location: "Location: "
+        detail_seated: "Detail seated"
+
   devise:
     failure:
       user:
