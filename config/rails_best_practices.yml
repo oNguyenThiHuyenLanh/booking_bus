@@ -27,7 +27,8 @@ RemoveUnusedMethodsInControllersCheck: { except_methods: [
   "PagesController#show",
   "HomeController#show",
   "PagesController#index",
-  "AddressesController#index"
+  "AddressesController#index",
+  "Admin::SchedulesController#index"
 ] }
 RemoveUnusedMethodsInHelpersCheck: { except_methods: [] }
 RemoveUnusedMethodsInModelsCheck: { except_methods: [] }
