@@ -6,26 +6,35 @@ class Schedule < ApplicationRecord
   belongs_to :final, foreign_key: "final_station_id",
     class_name: PickAddress.name
 
+  has_one :origin, through: :route
+  has_one :destination, through: :route
+  has_one :model_bus, through: :bus
+  has_many :active_seat_coordinates, through: :model_bus
+  has_many :type_of_seat, ->{distinct}, through: :active_seat_coordinates
+
   has_many :bills
+  has_many :booked_seats, through: :bills
 
   def empty_slot
-    bus.number_of_seats - booked_seats.count
+    model_bus.amount_of_seats - booked_seats.count
   end
 
-  def booked_seats_second_floor
-    seats = booked_seats.pluck(:no_of_seat)
-    booked_seats = []
-    seats.each do |seat|
-      booked_seats << seat if seat >= Settings.slot_per_floor
-    end
+  def price_of_seat no_of_seat
+    type_of_seat.where("active_seat_coordinates.number = ?", no_of_seat)
+      .pluck(:bonus_price).first + price
   end
 
-  def booked_seats_first_floor
-    seats = booked_seats.pluck(:no_of_seat)
-    booked_seats = []
-    seats.each do |seat|
-      booked_seats << seat if seat < Settings.slot_per_floor
-    end
+  def name_type_of_seat no_of_seat
+    type_of_seat.where("active_seat_coordinates.number = ?", no_of_seat)
+      .pluck("type_of_seats.name").first
+  end
+
+  def origin_address
+    origin.city
+  end
+
+  def destination_address
+    destination.city
   end
 
   class << self
