@@ -19,7 +19,7 @@
 //= require_tree .
 
 document.addEventListener("turbolinks:load", function() {
-  $('.nav li a').on('click', function(event) {
+  $('.disable_click').on('click', function(event) {
     event.preventDefault();
   })
 })

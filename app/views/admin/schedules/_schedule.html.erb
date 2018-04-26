@@ -9,9 +9,11 @@
   <td><%= schedule.date <= Date.current ? t("admin.schedule.status.done") :
     t("admin.schedule.status.doing") %></td>
   <td>
-    <button type="button" class="btn btn-warning btn-circle"><i class="fa fa-edit"></i>
-    </button>
-    <button type="button" class="btn btn-danger btn-circle"><i class="fa fa-times"></i>
-    </button>
+    <%= link_to admin_schedule_path(id: schedule.id), class: "btn btn-warning" do %>
+      <%= content_tag :i, t("admin.schedule.detail"), class: "fa fa-list-alt" %>
+    <% end %>
+    <%= link_to admin_schedule_path(id: schedule.id), class: "btn btn-primary" do %>
+      <%= content_tag :i, t("admin.schedule.edit"), class: "fa fa-edit" %>
+    <% end %>
   </td>
 </tr>

@@ -1,7 +1,7 @@
 module Admin
   class SchedulesController < BaseController
     before_action :filter
-    attr_reader :road_ids
+    before_action :find_schedule, only: %i(show)
 
     def index
       @support = Supports::ManageSchedulesSupport.new
@@ -12,7 +12,12 @@ module Admin
       end
     end
 
+    def show
+    end
+
     private
+
+    attr_reader :road_ids, :schedule
 
     def filter
       p_road_ids = params[:road_ids]
@@ -26,6 +31,14 @@ module Admin
       interval_ids = Interval.list_intervals param_interval_ids
       route_ids = Road.list_routes road_ids
       Schedule.list_schedules route_ids, interval_ids
+    end
+
+    def find_schedule
+      @schedule = Schedule.find_by id: params[:id]
+
+      return if schedule
+      flash[:danger] = t "admin.error.invalid_schedule"
+      redirect_to admin_schedules_path
     end
   end
 end
