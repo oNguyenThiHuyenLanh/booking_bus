@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300|Oswald');
+@import 'colors';
+
+/* Form fields */
+
+.form-horizontal {
+  font-family: 'Merriweather', serif;
+  margin: 10px auto;
+
+  ul {
+    padding-left: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-position: 97% 50%;
+    background-size: 15px;
+  }
+
+  textarea {
+    height: 120px;
+    line-height: 1.5;
+    padding: 15px 28px;
+  }
+
+  label {
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+}
+
+.form-horizontal input,
+.form-horizontal textarea,
+.form-horizontal select {
+  background: $white;
+  border: 2px solid $grey;
+  border-radius: 35px;
+  box-sizing: border-box;
+  color: $black;
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  height: 48px;
+  letter-spacing: normal;
+  line-height: 48px;
+  margin-bottom: 20px;
+  padding: 0 28px;
+  text-align: left;
+  width: 100%;
+}
+
+.form-horizontal input:focus,
+.form-horizontal textarea:focus,
+.form-horizontal select:focus {
+  border: 1px solid $light-gray;
+  outline: 0;
+}
+
+/* Buttons */
+
+.form-horizontal .next-btn,
+.form-horizontal .submit-btn {
+  background: $blue-sky;
+  border: 0;
+  border-radius: 0;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  font-family: oswald, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 22px;
+  min-width: 400px;
+  padding: 13px 18px;
+  text-align: center;
+  text-transform: uppercase;
+  transition-duration: .5s;
+  transition-property: background-color;
+  width: 100%;
+}
+
+.form-horizontal .next-btn:hover,
+.form-horizontal .submit-btn:hover {
+  background-color: $violet-light;
+  color: $white;
+}
+
+/* Progress Bar */
+
+.progress-wrap {
+  display: table;
+  margin: auto;
+
+  div ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin: initial;
+    padding: 0;
+    width: 400px;
+    z-index: 1;
+  }
+
+  .active {
+    background: $blue-sky;
+    border: 0 solid $green-leaf;
+    color: $white;
+  }
+}
+
+.line-progress-bar {
+  display: flex;
+  margin: auto;
+  width: 100%;
+}
+
+.line {
+  border-bottom-color: $gray85;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  height: 25px;
+  margin-top: 8px;
+  position: absolute;
+  width: 400px;
+}
+
+.progressbar-dots {
+  align-items: center;
+  background: $gray58;
+  border: 0 solid $gray85;
+  border-radius: 50%;
+  color: $gray83;
+  display: inline-flex;
+  font-size: 40px;
+  font-weight: bold;
+  height: 60px;
+  justify-content: center;
+  margin-left: 0;
+  text-align: center;
+  width: 60px;
+
+  span {
+    display: none;
+    float: left;
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: -30px;
+    margin-top: 60px;
+    position: absolute;
+  }
+}
+
+/*  Tab */
+
+.tab-pane {
+  display: none;
+
+  .back-btn {
+    background: $gray58;
+  }
+
+  li {
+    display: inline;
+    list-style: none;
+  }
+}
+
+.tab-pane:first-child {
+  display: block;
+}
+
+/* Error */
+
+.error {
+  color: $red001;
+  display: block;
+  font-family: "helvetica neue", arial, sans-serif;
+  font-size: 12px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.header-schedule {
+  display: inline-block;
+}
