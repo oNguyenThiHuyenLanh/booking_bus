@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :schedules, only: [:index, :show]
   end
   devise_for :users
+
+  resources :schedules, only: :index
 end

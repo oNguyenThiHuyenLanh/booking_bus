@@ -1,0 +1,70 @@
+<div id="schedule-<%= schedule.id %>" class="list-seat">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="seat-padding">
+        <label><%= t "how-to-select-seats" %></label>
+      </div>
+      <div class="seat-padding">
+        <%= render "schedules/floor2",
+          floor: schedule.booked_seats_second_floor,
+          schedule_id: schedule.id, second_floor: second_floor %>
+        <%= render "schedules/floor1",
+          floor: schedule.booked_seats_first_floor,
+          schedule_id: schedule.id, first_floor: first_floor %>
+        <div class="seat-type">
+          <ul>
+            <li>
+              <div class="selected"></div>
+              <%= t "selected-seat"%>
+            </li>
+            <li>
+              <div class="booked"></div>
+              <%= t "booked-seat"%>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="detail-wrap">
+            <label><%= schedule.route.origin.city %>
+              <i class="fa fa-arrow-right"></i>
+              <%= schedule.route.destination.city %> <%= t "day" %>
+              <%= schedule.date.strftime(t("date.formats.date_month_year_concise")) %>
+            </label>
+          </div>
+          <div class="detail">
+            <div class="row">
+              <div class="col-md-5">
+                <%= t "booked-seat" %>
+              </div>
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-7 wrap-selected-seat">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <%= t "total-price" %>
+              </div>
+              <div class="col-md-1">
+              </div>
+              <div class="col-md-7">
+                <p class="total-price"></p>
+              </div>
+            </div>
+          </div>
+          <div class="detail2">
+            <button class="btn btn-info">
+              <%= link_to t("continue"), root_url %>
+            </button>
+          </div>
+        </div>
+        <div class="col-md-2">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

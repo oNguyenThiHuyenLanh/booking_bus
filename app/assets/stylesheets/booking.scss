@@ -64,6 +64,7 @@
   padding: 9px;
   position: relative;
   text-align: center;
+  width: 400px;
 
   p {
     font-size: 12px;
@@ -140,6 +141,25 @@
 }
 
 .seat-location {
+  border: 1px solid $red;
+  display: inline;
+  height: 28px;
+  list-style-type: none;
+  margin: 3px 3px 0 0;
+  width: 35px;
+}
+
+.seat-location-wc {
+  border: 1px solid $red;
+  display: inline;
+  height: 28px;
+  list-style-type: none;
+  margin: 3px 3px 0 0;
+  width: 35px;
+}
+
+.seat-location-booked {
+  background: $black;
   border: 1px solid $red;
   display: inline;
   height: 28px;

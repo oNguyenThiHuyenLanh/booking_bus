@@ -4,8 +4,8 @@
   <div class="form-booking">
     <div class="row">
       <div class="col-md-9 form">
-        <%= form_for :search, method: "post", html: {id: "search_form"},
-          remote: true do |f| %>
+        <%= form_for :search, method: "get", html: {id: "search_form"},
+          url: schedules_url do |f| %>
           <div class="row inline">
             <div class="col-md-4">
               <%= f.label :origin_address, t("origin_address") %>
@@ -34,16 +34,15 @@
               <%= f.label :date, t("date_of_department") %>
                 <div class="input-group">
                   <%= f.text_field "date", class: "form-control",
-                    data: {provide: "datepicker"}, id: "date" %>
+                    data: {provide: "datepicker"}, id: "search_date" %>
                 </div>
             </div>
             <div class="col-md-offset-2 col-md-4">
               <%= f.label :interval, t("interval") %>
               <div>
                 <%= f.select "interval",
-                  options_for_select({t("morning") => "1",
-                    t("afternoon") => "2", t("night") => "3"}),
-                    {include_blank: true}, {class: "select-custom", id: "interval"} %>
+                  options_from_collection_for_select(@intervals, "id", "name"),
+                  {include_blank: true}, {class: "select-custom", id: "interval"} %>
               </div>
             </div>
           </div>

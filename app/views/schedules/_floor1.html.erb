@@ -1,0 +1,46 @@
+<div class="seat-wrap">
+  <div class="row">
+    <div class="col-md-2">
+      <p><%= t "floor_1" %></p>
+    </div>
+    <div class="col-md-10">
+      <% (0..4).each do |i| %>
+        <ul>
+          <% (0..6).each do |j| %>
+            <% if i==0 && j==6 %>
+              <li class="float-left seat-location-wc">WC</li>
+            <% elsif i==3 && j==6 %>
+              <% if floor.include?13 %>
+                <li id="13" class="float-left seat-location-booked">13</li>
+              <% else %>
+                <li id="13" class="float-left seat-location">13</li>
+              <% end %>
+            <% elsif i%2==1 %>
+              <li id="<%= j %>-<%= i %>"
+                class="float-left seat-location-blank"></li>
+            <% elsif (i==2 || i==4) && j==5 %>
+              <li id="<%= j %>-<%= i %>"
+                class="float-left seat-location-blank"></li>
+            <% else %>
+              <% if first_floor.last == 13 %>
+                <% first_floor << first_floor.last.next %>
+              <% end %>
+              <% if floor.include?(first_floor.last)%>
+                <li id="<%= first_floor.last %>"
+                  class="float-left seat-location-booked">
+                  <%= first_floor.last %>
+                </li>
+              <% else %>
+                <li id="<%= first_floor.last %>"
+                  class="float-left seat-location">
+                  <%= first_floor.last %>
+                </li>
+              <% end %>
+              <% first_floor << first_floor.last.next %>
+            <% end %>
+          <% end %>
+        </ul>
+      <% end %>
+    </div>
+  </div>
+</div>
