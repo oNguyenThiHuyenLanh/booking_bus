@@ -1,0 +1,137 @@
+<div class="row">
+  <div class="col-md-6">
+    <p class="confirm-title"><%= t "confirm_booking" %></p>
+  </div>
+  <div class="col-md-6">
+    <h4 class="count-down" id="time"></h4>
+  </div>
+</div>
+<hr></hr>
+<div class="row">
+  <div class="col-md-6">
+    <div class="confirm-left">
+      <div class="intro">
+        <p><%= t "fillout-info-title" %></p>
+      </div>
+      <div class="customer-info">
+        <div class="row">
+          <div class="col-md-4 info-wrap">
+            <%= t "phone-number" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 info-wrap">
+            <%= t "email" %>
+          </div>
+          <div class="col-md-6 info-wrap">
+            <input class="info" name="email" type="text"
+              value="<%= current_user.email %>"/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="margin-bottom-5"></hr>
+    <div class="note">
+      <p><%= t "note" %></p>
+      <ul>
+        <li><%= t "policy_one" %></li>
+        <li><%= t "policy_one" %></li>
+      </ul>
+    </div>
+    <div class="margin-top-10">
+      <button class="btn btn-primary btn-block" id="booking">
+        <%= t "booking" %></button>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="confirm-right-top">
+      <div class="row">
+        <div class="col-md-4 info-wrap">
+          <%= t "routes" %>
+        </div>
+        <div class="col-md-7 info-wrap">
+          <span><span id="origin"></span> ->
+            <span id="destination"></span>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 info-wrap">
+          <%= t "start-time" %>
+        </div>
+        <div class="col-md-7 info-wrap">
+          <span><span class="start-time"></span> <%= t "day" %>
+            <span class="date"></span>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 info-wrap">
+          <%= t "list-of-seat" %>
+        </div>
+        <div class="col-md-7 info-wrap seats">
+          <span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="confirm-right-bottom">
+      <div class="row">
+        <div class="col-md-4 info-wrap">
+          <%= t "total-price" %>
+        </div>
+        <div class="col-md-7 info-wrap">
+          <span class="total-price"></span>
+        </div>
+      </div>
+      <hr></hr>
+      <div class="row">
+        <div class="col-md-4 info-wrap">
+          <%= t "have-to-pay" %>
+        </div>
+        <div class="col-md-7 info-wrap">
+          <span id="payment"></span>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="modal fade" id="booking_successfully" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= t "notification" %></h4>
+      </div>
+      <div class="modal-body">
+        <p><%= t "message.booking.successfully" %></p>
+      </div>
+      <div class="modal-footer">
+        <%= button_tag t("close"), class: "btn btn-default",
+          data: {dismiss: "modal"} %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="booking_unsuccessfully" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= t "notification" %></h4>
+      </div>
+      <div class="modal-body">
+        <p><%= t "message.booking.unsuccessfully" %></p>
+      </div>
+      <div class="modal-footer">
+        <%= button_tag t("close"), class: "btn btn-default",
+          data: {dismiss: "modal"} %>
+      </div>
+    </div>
+  </div>
+</div>

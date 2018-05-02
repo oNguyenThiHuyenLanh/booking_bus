@@ -38,7 +38,12 @@ class Schedule < ApplicationRecord
   end
 
   def no_of_booked_seat_array
-    booked_seats.pluck(:no_of_seat)
+    booked_seats.pluck :no_of_seat
+  end
+
+  def seats_existed seats
+    list_of_booked_seats = booked_seats.pluck :no_of_seat
+    !(list_of_booked_seats - seats == list_of_booked_seats)
   end
 
   class << self

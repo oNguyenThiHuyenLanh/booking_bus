@@ -254,7 +254,7 @@ User.create!(phone_number: "0965273896",
   admin: 1)
 
 User.create!(phone_number: "0944854132",
-  email: "quannla@gmail.com",
+  email: "20143645@student.hust.edu.vn",
   password: "anhquan96",
   admin: 0)
 

@@ -6,7 +6,7 @@ vi:
   contact: "Liên hệ"
   title: "Mua vé xe trực tuyến"
   footer_title_left: "Hệ thống đặt vé trực tuyến"
-  footer_title_right: "Công ty cổ phần xe khách cao cấp Ahihi"
+  footer_title_right: "Công ty cổ phần xe khách cao cấp"
   login: "Đăng nhập"
   signup: "Đăng ký"
   signup_title: "Đăng ký tài khoản miễn phí"
@@ -38,6 +38,7 @@ vi:
   floor_1: "Tầng 1"
   floor_2: "Tầng 2"
   how-to-select-seats: "Bấm vào ghế để chọn hoặc bỏ chọn"
+
   selected-seat: "Ghế đã chọn"
   booked-seat: "Ghế đã đặt"
   total-price: "Tổng tiền"
@@ -70,7 +71,13 @@ vi:
   detail: "Chi tiết"
   unbooked-seat: "Ghế chưa đặt"
   floor: "Tầng"
-
+  policy_one: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do"
+  message:
+    booking:
+      successfully: "Đặt vé thành công. Vui lòng kiểm tra email của bạn"
+      unsuccessfully: "Đặt vé không thành công."
+  close: "Đóng"
+  notification: "Thông báo đặt vé"
   date:
     formats:
       date_month_year_concise: "%d/%m/%Y"
@@ -186,6 +193,7 @@ vi:
     failure:
       user:
         not_found_in_database: "Không tìm thấy người dùng"
+        unauthenticated: "Bạn phải đăng nhập trước"
     sessions:
       user:
         signed_in: "Đăng nhập thành công"
@@ -203,6 +211,8 @@ vi:
               blank: "Không được để trống"
             password:
               blank: "Không được để trống"
+        bill:
+          save: "Hệ thống đã xảy ra lỗi"
   errors:
     messages:
       not_saved: "Không thể lưu"
@@ -211,3 +221,9 @@ vi:
       format:
         format: "%n %u"
         unit: "VND"
+  bill_mailer:
+    greeting: "Xin chào"
+    introduction: "Xác nhận đặt vé thành công"
+    booked_successfully:
+      subject: "Đặt vé thành công"
+    

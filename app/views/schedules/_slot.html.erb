@@ -39,21 +39,23 @@
           <div class="col-md-5">
             <%= t "booked-seat" %>
           </div>
-          <div class="col-md-7 wrap-selected-seat">
+          <div class="col-md-7 booked-seat"
+            data-schedule="<%= schedule.id %>">
           </div>
         </div>
         <div class="row">
           <div class="col-md-5">
             <%= t "total-price" %>
           </div>
-          <div class="col-md-7">
-            <p class="total-price"></p>
+          <div class="col-md-7 total-price"
+            data-schedule="<%= schedule.id %>">
           </div>
         </div>
       </div>
       <div class="detail2">
-        <button class="btn btn-info continue-btn">
-          <%= link_to t("continue"), root_url %>
+        <button class="btn btn-info continue-btn"
+          data-schedule="<%= schedule.id %>" disabled>
+          <%= t "continue" %>
         </button>
       </div>
     </div>

@@ -56,21 +56,6 @@
   width: 25px;
 }
 
-.unbooked {
-  background-color: $white;
-  border: 1px solid $black;
-}
-
-.selected {
-  background-color: $selected;
-  border: 1px solid $black;
-}
-
-.booked {
-  background-color: $booked;
-  border: 1px dashed $black;
-}
-
 .seat-wrap {
   background-color: $white;
   border: 1px solid $silver;
@@ -366,7 +351,7 @@
   font-size: 14px;
 }
 
-.book {
+button.book {
   background: $book-btn;
 
   &:hover {
@@ -379,52 +364,3 @@
   margin-top: 50px;
 }
 
-.bus-seat {
-  display: table;
-}
-
-.seat {
-  background: $white;
-  border: 1px solid;
-  border-radius: 10px;
-  display: inline-block;
-  height: 28px;
-  list-style-type: none;
-  margin: 4px 7px;
-  text-align: center;
-  width: 50px;
-
-  &:hover {
-    background: $maya-blue;
-    cursor: pointer;
-  }
-}
-
-.frame tr td {
-  display: inline-table;
-  height: 40px;
-  width: 65px;
-}
-
-.booked-seat {
-  background: $booked;
-  border: 1px dashed $black;
-
-  &:hover {
-    background: $booked;
-    cursor: not-allowed;
-  }
-}
-
-.floor-bus {
-  border: 3px solid $pink-swan;
-  display: inline-block;
-}
-
-.title-floor {
-  padding-bottom: 14px;
-
-  label {
-    font-size: 20px;
-  }
-}

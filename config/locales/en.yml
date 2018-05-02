@@ -69,6 +69,11 @@ en:
       long: "%B %d, %Y"
   manage_pages: "Manage pages"
 
+  js:
+    date:
+      formats:
+        date_month_year: "mm/dd/yyyy"
+
   admin:
     y: "Paymented!"
     n: "Not yet!"
