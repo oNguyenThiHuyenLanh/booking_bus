@@ -6,11 +6,6 @@ class Schedule < ApplicationRecord
   belongs_to :final, foreign_key: "final_station_id",
     class_name: PickAddress.name
 
-  belongs_to :start, foreign_key: "start_station_id",
-    class_name: PickAddress.name
-  belongs_to :final, foreign_key: "final_station_id",
-    class_name: PickAddress.name
-
   has_many :booked_seats
   has_many :bills, through: :booked_seats
 
@@ -35,10 +30,14 @@ class Schedule < ApplicationRecord
   end
 
   class << self
-    def find_schedules *route_ids, date, interval_id
+    def find_schedules route_ids, date, interval_id
       schedules = Schedule.where route_id: route_ids, date: date,
         interval_id: interval_id
       schedules.to_a
+    end
+
+    def filter_schedules r_ids, i_ids
+      Schedule.where route_id: r_ids, interval_id: i_ids
     end
   end
 end

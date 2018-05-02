@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
   $('.selectpicker').on('change', function() {
     var data_road = $('#select-road').val();
     var data_interval = $('#select-interval').val();
