@@ -16,6 +16,14 @@ $(document).ready(function() {
   var formatDate = I18n.t('js.date.formats.date_month_year');
   $('#search_date').datepicker({format: formatDate})
     .datepicker('setDate', currentDate);
+  $('#search_date').parent().datepicker({
+    autoclose: true,
+    clearBtn: true,
+    daysOfWeekHighlighted: '0,6',
+    format: formatDate,
+    language: I18n.locale,
+    startDate: currentDate,
+    weekStart: 1});
 });
 
 $(document).on('turbolinks:load', function(){

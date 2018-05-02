@@ -20,5 +20,6 @@ module Project
 
     # i18n for js
     config.middleware.use I18n::JS::Middleware
+    config.sass.load_paths << File.expand_path('../../vendor/assets/stylesheets/')
   end
 end

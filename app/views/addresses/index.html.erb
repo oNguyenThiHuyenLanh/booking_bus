@@ -32,9 +32,13 @@
           <div class="row inline">
             <div class="col-md-4">
               <%= f.label :date, t("date_of_department") %>
-                <div class="input-group">
-                  <%= f.text_field "date", class: "form-control",
-                    data: {provide: "datepicker"}, id: "search_date" %>
+                <label class="error" for="search_date" generate="true"
+                  style="display: block;"></label>
+                <div class="input-group date search-schedule" data-provide="datepicker">
+                  <%= f.text_field "date", class: "form-control", id: "search_date"%>
+                  <div class="input-group-addon">
+                      <span class="glyphicon glyphicon-th"></span>
+                  </div>
                 </div>
             </div>
             <div class="col-md-offset-2 col-md-4">
@@ -49,7 +53,7 @@
           <div class="row inline">
             <div class="col-md-offset-6 col-md-4">
               <%= f.submit t("search"),
-                {class: "btn btn-primary select-custom"} %>
+                {class: "btn btn-primary select-custom", id: "search"} %>
             </div>
           </div>
         <% end %>
