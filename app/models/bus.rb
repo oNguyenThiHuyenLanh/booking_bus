@@ -1,4 +1,5 @@
 class Bus < ApplicationRecord
-  belongs_to :type_of_bus
+  belongs_to :model_bus
+
   has_many :schedules
 end

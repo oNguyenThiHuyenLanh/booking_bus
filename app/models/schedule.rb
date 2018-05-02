@@ -6,8 +6,7 @@ class Schedule < ApplicationRecord
   belongs_to :final, foreign_key: "final_station_id",
     class_name: PickAddress.name
 
-  has_many :booked_seats
-  has_many :bills, through: :booked_seats
+  has_many :bills
 
   def empty_slot
     bus.number_of_seats - booked_seats.count

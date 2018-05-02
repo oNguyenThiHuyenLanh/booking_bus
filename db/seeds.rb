@@ -1,62 +1,12 @@
 TypeOfSeat.create!(name: "normal",
-  ticket_price: 60000,
+  bonus_price: 60000,
   created_at: Time.zone.now,
   updated_at: Time.zone.now)
 
 TypeOfSeat.create!(name: "VIP",
-  ticket_price: 90000,
+  bonus_price: 90000,
   created_at: Time.zone.now,
   updated_at: Time.zone.now)
-
-
-TypeOfBus.create!(name: "Xe khách Daewoo")
-
-TypeOfBus.create!(name: "Xe khách Thaco")
-
-TypeOfBus.create!(name: "Xe khách Hyundai")
-
-Bus.create!(name: "Xe khách Daewoo FX12 40 cho",
-  number_of_seats: 40,
-  type_of_bus_id: 1)
-
-Bus.create!(name: "Xe giuong nam Daewoo BX212DS 40 cho",
-  number_of_seats: 40,
-  type_of_bus_id: 1)
-
-Bus.create!(name: "Xe Daewoo BC212MA 40 cho",
-  number_of_seats: 40,
-  type_of_bus_id: 1)
-
-Bus.create!(name: "Thaco Town TB95S 40 cho",
-  number_of_seats: 40,
-  type_of_bus_id: 2)
-
-Bus.create!(name: "Thaco Town TB82S 40 cho",
-  number_of_seats: 40,
-  type_of_bus_id: 2)
-
-Bus.create!(name: "Xe khách Hyundai Limostar 5.3 40 chỗ",
-  number_of_seats: 40,
-  type_of_bus_id: 3)
-
-Bus.create!(name: "Hyundai Universe Noble 40 chỗ",
-  number_of_seats: 40,
-  type_of_bus_id: 3)
-
-
-15.times do |n|
-  index = "#{n+1}"
-  Seat.create!(number: index,
-  type_of_seat_id: 2,
-  type_of_bus_id: 1)
-end
-25.times do |n|
-  index = "#{n+1}"
-  Seat.create!(number: index,
-  type_of_seat_id: 1,
-  type_of_bus_id: 1)
-end
-
 
 Road.create!(name: "Quốc lộ 1")
 Road.create!(name: "Đường Hồ Chí Minh")
@@ -69,7 +19,6 @@ Address.create!(city: "Thái Nguyên")
 Address.create!(city: "Hải Phòng")
 Address.create!(city: "Thanh Hóa")
 Address.create!(city: "Đà Nẵng")
-
 
 PickAddress.create!(name: "BX Yên Nghĩa",
    address_id: 1)
@@ -145,7 +94,6 @@ Route.create!(origin_id: 1,
 Route.create!(origin_id: 6,
   destination_id: 1,
   road_id: 2)
-
 
 # Ha Noi -> Nghe An
 # diem don tai HN
@@ -286,11 +234,114 @@ RoutePickAddress.create!(route_id: 10,
   pick_address_id: 12,
   time_from_address: 0)
 
-
 Interval.create!(name: "Sáng (0h-12h)")
 Interval.create!(name: "Chiều (12h-19h)")
 Interval.create!(name: "Tối (19h")
 
+User.create!(phone_number: "0989390159",
+  email: "a1k9lanh@gmail.com",
+  password: "anhquan96",
+  admin: 1)
+
+User.create!(phone_number: "0902228931",
+  email: "lanh123@gmail.com",
+  password: "anhquan96",
+  admin: 0)
+
+User.create!(phone_number: "0965273896",
+  email: "nguyenleanhquan@gmail.com",
+  password: "anhquan96",
+  admin: 1)
+
+User.create!(phone_number: "0944854132",
+  email: "quannla@gmail.com",
+  password: "anhquan96",
+  admin: 0)
+
+ModelBus.create!(amount_of_seats: 40,
+  number_of_floors: 1,
+  number_of_rows: 8,
+  number_of_columns: 6)
+ModelBus.create!(amount_of_seats: 40,
+  number_of_floors: 1,
+  number_of_rows: 10,
+  number_of_columns: 5)
+ModelBus.create!(amount_of_seats: 50,
+  number_of_floors: 2,
+  number_of_rows: 6,
+  number_of_columns: 5)
+
+ActiveSeatCoordinate.create!(column: 3,
+  row: 1,
+  number: 1,
+  model_bus_id: 1,
+  type_of_seat_id: 2,
+  floor: 1)
+
+ActiveSeatCoordinate.create!(column: 4,
+  row: 1,
+  number: 2,
+  model_bus_id: 1,
+  type_of_seat_id: 2,
+  floor: 1)
+
+number = 2
+row = 1
+2.times do |n|
+  row = row + 1
+    4.times do |m|
+      column = m+2
+      number = number + 1
+      ActiveSeatCoordinate.create!(column: column,
+        row: row,
+        number: number,
+        model_bus_id: 1,
+        type_of_seat_id: 2,
+        floor: 1)
+    end
+end
+
+5.times do |n|
+  row = row + 1
+    6.times do |m|
+      column = m+1
+      number = number + 1
+      ActiveSeatCoordinate.create!(column: column,
+        row: row,
+        number: number,
+        model_bus_id: 1,
+        type_of_seat_id: 1,
+        floor: 1)
+    end
+end
+
+Bus.create!(name: "Xe khách Daewoo FX12 40 cho",
+  number_of_seats: 40,
+  model_bus_id: 1)
+
+Bus.create!(name: "Xe giuong nam Daewoo BX212DS 40 cho",
+  number_of_seats: 40,
+  model_bus_id: 1)
+
+Bus.create!(name: "Xe Daewoo BC212MA 40 cho",
+  number_of_seats: 40,
+  model_bus_id: 1)
+
+Bus.create!(name: "Thaco Town TB95S 40 cho",
+  number_of_seats: 40,
+  model_bus_id: 1)
+
+Bus.create!(name: "Thaco Town TB82S 40 cho",
+  number_of_seats: 40,
+  model_bus_id: 1)
+
+Bus.create!(name: "Xe khách Hyundai Limostar 5.3 40 chỗ",
+  number_of_seats: 40,
+  model_bus_id: 1)
+
+Bus.create!(name: "Hyundai Universe Noble 40 chỗ",
+  number_of_seats: 40,
+  model_bus_id: 1)
 
 Schedule.create!(price: 300000,
   date: Date.parse("15/05/2018"),
@@ -303,7 +354,7 @@ Schedule.create!(price: 300000,
   final_station_id: 6)
 
 Schedule.create!(price: 300000,
-  date: Date.parse("15/05/2018"),  
+  date: Date.parse("15/05/2018"),
   time_start: "13:30",
   time_spent: 300,
   bus_id: 1,
@@ -333,7 +384,7 @@ Schedule.create!(price: 300000,
   final_station_id: 1)
 
 Schedule.create!(price: 120000,
-  date: Date.parse("05/10/2018"),  
+  date: Date.parse("05/10/2018"),
   time_start: "8:00",
   time_spent: 300,
   bus_id: 4,
@@ -472,135 +523,55 @@ Schedule.create!(price: 160000,
   start_station_id: 12,
   final_station_id: 1)
 
-User.create!(phone_number: "0989390159",
-  email: "a1k9lanh@gmail.com",
-  password: "anhquan96",
-  admin: 1)
-
-User.create!(phone_number: "0902228931",
-  email: "lanh123@gmail.com",
-  password: "anhquan96",
-  admin: 0)
-
-User.create!(phone_number: "0965273896",
-  email: "nguyenleanhquan@gmail.com",
-  password: "anhquan96",
-  admin: 1)
-
-User.create!(phone_number: "0944854132",
-  email: "quannla@gmail.com",
-  password: "anhquan96",
-  admin: 0)
-
 Bill.create!(total_price: 100000,
   total_ticket: 2,
-  status: 1,
-  user_id: 2)
-
-BookedSeat.create!(no_of_seat: 9,
-  bill_id: 1,
-  schedule_id: 1)
-
-BookedSeat.create!(no_of_seat: 10,
-  bill_id: 1,
-  schedule_id: 1)
-
-Bill.create!(total_price: 200000,
-  total_ticket: 4,
-  status: 1,
-  user_id: 2)
-
-BookedSeat.create!(no_of_seat: 15,
-  bill_id: 2,
-  schedule_id: 1)
-
-BookedSeat.create!(no_of_seat: 16,
-  bill_id: 2,
-  schedule_id: 1)
-
-BookedSeat.create!(no_of_seat: 17,
-  bill_id: 2,
-  schedule_id: 1)
-
-BookedSeat.create!(no_of_seat: 18,
-  bill_id: 2,
-  schedule_id: 1)
-
-Bill.create!(total_price: 200000,
-  total_ticket: 2,
-  status: 0,
-  user_id: 2)
-BookedSeat.create!(no_of_seat: 8,
-  bill_id: 3,
-  schedule_id: 2)
-BookedSeat.create!(no_of_seat: 9,
-  bill_id: 3,
-  schedule_id: 2)
+  user_id: 2,
+  schedule_id: 1
+  )
+  BookedSeat.create!(no_of_seat: 1,
+    bill_id: 1)
+  BookedSeat.create!(no_of_seat: 5,
+    bill_id: 1)
 
 Bill.create!(total_price: 50000,
   total_ticket: 1,
-  status: 0,
-  user_id: 2)
-BookedSeat.create!(no_of_seat: 1,
-  bill_id: 4,
-  schedule_id: 2)
-
-Bill.create!(total_price: 50000,
-  total_ticket: 1,
-  status: 0,
-  user_id: 2)
-BookedSeat.create!(no_of_seat: 5,
-  bill_id: 5,
-  schedule_id: 2)
+  user_id: 2,
+  schedule_id: 1)
+  BookedSeat.create!(no_of_seat: 21,
+    bill_id: 2)
 
 Bill.create!(total_price: 100000,
   total_ticket: 2,
-  status: 1,
-  user_id: 4)
-BookedSeat.create!(no_of_seat: 21,
-  bill_id: 6,
+  user_id: 4,
   schedule_id: 1)
-BookedSeat.create!(no_of_seat: 22,
-  bill_id: 6,
-  schedule_id: 1)
+  BookedSeat.create!(no_of_seat: 22,
+    bill_id: 3)
+  BookedSeat.create!(no_of_seat: 6,
+    bill_id: 3)
 
 Bill.create!(total_price: 50000,
   total_ticket: 1,
-  status: 1,
-  user_id: 4)
-BookedSeat.create!(no_of_seat: 6,
-  bill_id: 7,
-  schedule_id: 1)
+  user_id: 4,
+  schedule_id: 2)
+  BookedSeat.create!(no_of_seat: 6,
+    bill_id: 4)
 
 Bill.create!(total_price: 100000,
   total_ticket: 2,
-  status: 0,
-  user_id: 4)
-BookedSeat.create!(no_of_seat: 6,
-  bill_id: 8,
+  user_id: 4,
   schedule_id: 2)
-BookedSeat.create!(no_of_seat: 7,
-  bill_id: 8,
-  schedule_id: 2)
+  BookedSeat.create!(no_of_seat: 7,
+    bill_id: 4)
+  BookedSeat.create!(no_of_seat: 10,
+    bill_id: 4)
 
 Bill.create!(total_price: 150000,
   total_ticket: 3,
-  status: 0,
-  user_id: 4)
-BookedSeat.create!(no_of_seat: 10,
-  bill_id: 9,
+  user_id: 4,
   schedule_id: 2)
-BookedSeat.create!(no_of_seat: 11,
-  bill_id: 9,
-  schedule_id: 2)
-BookedSeat.create!(no_of_seat: 12,
-  bill_id: 9,
-  schedule_id: 2)
-
-Bill.create!(total_price: 50000,
-  total_ticket: 1,
-  status: 0,
-  user_id: 4)
-BookedSeat.create!(no_of_seat: 19,
-  bill_id: 10,
-  schedule_id: 2)
+  BookedSeat.create!(no_of_seat: 11,
+    bill_id: 5)
+  BookedSeat.create!(no_of_seat: 12,
+    bill_id: 5)
+  BookedSeat.create!(no_of_seat: 19,
+    bill_id: 5)
