@@ -58,6 +58,8 @@ en:
   select-interval: "Select interval"
   user-profile: "User profile"
   booking-history: "Booking history"
+  unbooked-seat: "Unbooked seat"
+  floor: "Floor"
 
   date:
     formats:
@@ -83,7 +85,7 @@ en:
       invalid_schedule: "Invalid schedule!"
     stt:
       now: "NOW"
-      will_do: "IN THE FUTURE" 
+      will_do: "IN THE FUTURE"
     sidebar:
       dashboard: "Dashboard"
       bus: "Manage Bus"

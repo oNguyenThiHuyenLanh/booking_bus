@@ -37,6 +37,10 @@ class Schedule < ApplicationRecord
     destination.city
   end
 
+  def no_of_booked_seat_array
+    booked_seats.pluck(:no_of_seat)
+  end
+
   class << self
     def find_schedules route_ids, date, interval_id
       schedules = Schedule.where route_id: route_ids, date: date,

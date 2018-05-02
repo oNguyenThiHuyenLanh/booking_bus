@@ -1,10 +1,21 @@
-<% if @schedules.first %>
+<% unless @schedules.empty? %>
   <div class="panel panel-default">
-    <div class="panel-body">
-      <span class="from-to"><%= @schedules.first.route.origin.city %>
-        <i class="fa fa-arrow-right font-12"></i>
-        <%= @schedules.first.route.destination.city %></span><br>
-      <div>
+    <div class="panel-body info-schedule container-fluid">
+      <div class="from-to">
+        <span class="city-span-left col-md-4">
+          <%= @schedules.first.origin_address %>
+        </span>
+        <span class="icon-from-to col-md-4">
+          <i class="fa fa-fighter-jet"></i>
+          <i class="fa fa-fighter-jet"></i>
+          <i class="fa fa-fighter-jet"></i>
+          <i class="fa fa-fighter-jet"></i>
+        </span>
+        <span class="city-span-right col-md-4">
+          <%= @schedules.first.destination_address %>
+        </span>
+      </div>
+      <div class="info-date">
         <a><i class="fa fa-chevron-circle-left font-15"></i></a>
         <span><%= @schedules.first.date.strftime("%d/%m/%Y")%></span>
         <a><i class="fa fa-chevron-circle-right font-15"></i></a>
@@ -13,9 +24,7 @@
   </div>
 
   <ul class="list-trip">
-    <%= render @schedule_support.schedules,
-      first_floor: @schedule_support.first_floor,
-      second_floor: @schedule_support.second_floor %>
+    <%= render @schedules %>
   </ul>
 <% else %>
   <p><%= t "no_data" %></p>

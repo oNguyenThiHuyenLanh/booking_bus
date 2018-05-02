@@ -16,44 +16,59 @@
 }
 
 .list-seat {
-  background-color: $whisper;
-  border-top: 1px solid $gray-lighter;
+  border: 4px solid $gray-lighter;
+  border-radius: 25px;
   display: none;
   margin-top: 10px;
   padding: 0;
 
-  .seat-padding label {
-    font-size: 13px;
+  .seat-padding {
+    padding: 5px 0;
+    text-align: center;
+
+    >label {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 25px;
+      padding-top: 10px;
+      text-transform: uppercase;
+    }
   }
 }
 
-.seat-type ul {
-  list-style-type: none;
+.seat-type {
+  margin-top: 15px;
 
-  li {
-    display: inline;
-    margin-left: 20px;
+  ul {
+    list-style-type: none;
+    padding: 0;
+
+    li {
+      display: inline;
+      padding-right: 25px;
+    }
   }
+}
+
+.tpye-seat {
+  border-radius: 6px;
+  display: inline-block;
+  height: 18px;
+  width: 25px;
+}
+
+.unbooked {
+  background-color: $white;
+  border: 1px solid $black;
 }
 
 .selected {
-  background-color: $red;
+  background-color: $selected;
   border: 1px solid $black;
-  display: inline-block;
-  height: 18px;
-  width: 18px;
 }
 
 .booked {
-  background-color: $black;
-  border: 1px solid $black;
-  display: inline-block;
-  height: 18px;
-  width: 18px;
-}
-
-.seat-padding {
-  padding: 5px 45px;
+  background-color: $booked;
+  border: 1px dashed $black;
 }
 
 .seat-wrap {
@@ -243,14 +258,41 @@
 
 .detail {
   border-top: 1px solid $silver;
+  font-size: 17px;
   margin-top: 10px;
-  padding: 5px 45px 5px 0;
+  padding: 5px 0;
+
+  .row div {
+    padding: 0;
+  }
 }
 
 .detail2 {
   border-top: 1px solid $silver;
   margin-top: 10px;
   padding-top: 15px;
+}
+
+.continue-btn {
+  background: $book-btn;
+  border: 0;
+  float: right;
+
+  &:hover {
+    background: $red;
+
+    a {
+      color: $white;
+    }
+  }
+
+  a {
+    color: $eclipse;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
 }
 
 .dropbtn {
@@ -309,4 +351,80 @@
 
 .li-hover:hover {
   display: block;
+}
+
+.schedule-city {
+  color: $night-rider;
+  display: block;
+  font-size: 18px;
+  margin: 0;
+}
+
+.date-schedule {
+  color: $gurkha;
+  display: block;
+  font-size: 14px;
+}
+
+.book {
+  background: $book-btn;
+
+  &:hover {
+    background: $red;
+    color: $white;
+  }
+}
+
+.bill-detail {
+  margin-top: 50px;
+}
+
+.bus-seat {
+  display: table;
+}
+
+.seat {
+  background: $white;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-block;
+  height: 28px;
+  list-style-type: none;
+  margin: 4px 7px;
+  text-align: center;
+  width: 50px;
+
+  &:hover {
+    background: $maya-blue;
+    cursor: pointer;
+  }
+}
+
+.frame tr td {
+  display: inline-table;
+  height: 40px;
+  width: 65px;
+}
+
+.booked-seat {
+  background: $booked;
+  border: 1px dashed $black;
+
+  &:hover {
+    background: $booked;
+    cursor: not-allowed;
+  }
+}
+
+.floor-bus {
+  border: 3px solid $pink-swan;
+  display: inline-block;
+}
+
+.title-floor {
+  padding-bottom: 14px;
+
+  label {
+    font-size: 20px;
+  }
 }

@@ -5,8 +5,29 @@
   width: 940px;
 }
 
-.from-to {
-  font-size: 18px;
+.info-schedule {
+  .from-to {
+    display: inline-block;
+    font-size: 40px;
+    text-transform: uppercase;
+    width: 100%;
+
+    .city-span-left {
+      text-align: right;
+    }
+
+    .city-span-right {
+      text-align: left;
+    }
+
+    .icon-from-to {
+      text-align: center;
+    }
+  }
+
+  .info-date {
+    text-align: center;
+  }
 }
 
 .form-booking {

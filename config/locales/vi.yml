@@ -68,6 +68,8 @@ vi:
   day: "ngày"
   remain: "Còn"
   detail: "Chi tiết"
+  unbooked-seat: "Ghế chưa đặt"
+  floor: "Tầng"
 
   date:
     formats:
