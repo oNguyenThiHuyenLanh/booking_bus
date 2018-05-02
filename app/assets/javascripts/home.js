@@ -30,9 +30,3 @@ $(document).ready(function() {
     }
   });
 });
-
-$(document).on('click', '#search_form', function() {
-  setTimeout(function() {
-    $('label.error').fadeOut('slow');
-  }, 2000);
-});

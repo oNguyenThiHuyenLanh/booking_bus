@@ -18,7 +18,21 @@
   width: 205px;
 }
 
+/* select2 custom height */
+.select2-selection.select2-selection--single {
+  height: 34px;
+}
+
 .icon {
   font-size: 20px;
   padding-top: 30px;
+}
+
+/* datepicker custom */
+.search-schedule.input-group.date {
+  width: 205px;
+}
+
+.error {
+  color: $red;
 }
