@@ -12,12 +12,12 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require select2
-//= require select2_locale_en
-//= require select2_locale_vi
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap-datepicker
+//= require select2
+//= require select2_locale_en
+//= require select2_locale_vi
 //= require jquery.validate
 //= require i18n
 //= require i18n.js
