@@ -30,7 +30,7 @@ module Admin
       @road_ids = param_road_ids
       interval_ids = Interval.list_intervals param_interval_ids
       route_ids = Road.list_routes road_ids
-      Schedule.list_schedules route_ids, interval_ids
+      Schedule.filter_schedules route_ids, interval_ids
     end
 
     def find_schedule

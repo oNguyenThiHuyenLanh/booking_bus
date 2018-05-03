@@ -13,7 +13,7 @@
         </div>
       </li>
       <li>
-        <%= link_to "#" do%>
+        <%= link_to "#", data: {turbolinks: "false"} do %>
           <i class="fa fa-dashboard fa-fw"></i>
           <%= t "admin.sidebar.dashboard" %>
         <% end %>
@@ -22,13 +22,16 @@
         <%= dropdown_link("fa fa-wrench fa-fw", "bus", "disable_click") %>
         <ul class="nav nav-second-level collapse" id="bus">
           <li>
-            <%= link_to t("admin.sidebar.showBus"), "#" %>
+            <%= link_to t("admin.sidebar.showBus"), "#",
+              data: {turbolinks: "false"} %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.addBus"), "#" %>
+            <%= link_to t("admin.sidebar.addBus"), "#",
+              data: {turbolinks: "false"} %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.statistic"), "#" %>
+            <%= link_to t("admin.sidebar.statistic"), "#",
+              data: {turbolinks: "false"} %>
           </li>
         </ul>
       </li>
@@ -36,13 +39,16 @@
         <%= dropdown_link("fa fa-wrench fa-fw", "schedule", "disable_click") %>
         <ul class="nav nav-second-level collapse" id="schedule">
           <li>
-            <%= link_to t("admin.sidebar.showSchedule"), admin_schedules_path %>
+            <%= link_to t("admin.sidebar.showSchedule"), admin_schedules_path,
+              data: {turbolinks: "false"} %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.addSchedule"), "#" %>
+            <%= link_to t("admin.sidebar.addSchedule"), "#",
+              data: {turbolinks: "false"} %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.statistic"), "#" %>
+            <%= link_to t("admin.sidebar.statistic"), "#",
+              data: {turbolinks: "false"} %>
           </li>
         </ul>
       </li>
@@ -50,10 +56,12 @@
         <%= dropdown_link("fa fa-bar-chart-o fa-fw", "statistic", "disable_click") %>
         <ul class="nav nav-second-level collapse" id="statistic">
           <li>
-            <%= link_to t("admin.sidebar.statisticSchedule"), "#" %>
+            <%= link_to t("admin.sidebar.statisticSchedule"), "#",
+              data: {turbolinks: "false"} %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.statisticPassenger"), "#" %>
+            <%= link_to t("admin.sidebar.statisticPassenger"), "#",
+              data: {turbolinks: "false"} %>
           </li>
         </ul>
       </li>
