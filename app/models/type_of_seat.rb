@@ -1,3 +1,3 @@
 class TypeOfSeat < ApplicationRecord
-  has_many :seats, dependent: :destroy
+  has_many :active_seat_coordinates
 end
