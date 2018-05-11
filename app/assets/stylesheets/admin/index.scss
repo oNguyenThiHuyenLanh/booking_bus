@@ -1,0 +1,13 @@
+@import 'colors';
+
+.filter-part {
+  margin: 20px 10px;
+
+  .btn-group button {
+    background: $white;
+  }
+
+  button {
+    float: right;
+  }
+}

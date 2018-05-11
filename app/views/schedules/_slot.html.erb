@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-md-9">
       <div class="seat-padding">
-        <label><%= t "how-to-select-seats" %></label>
+        <label class="lb"><%= t "how-to-select-seats" %></label>
       </div>
       <div class="seat-padding">
         <%= render "schedules/model_bus", schedule: schedule %>
@@ -13,7 +13,7 @@
               <%= t "unbooked-seat"%>
             </li>
             <li>
-              <div class="tpye-seat selected"></div>
+              <div class="tpye-seat selected-seat"></div>
               <%= t "selected-seat"%>
             </li>
             <li>

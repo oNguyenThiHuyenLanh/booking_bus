@@ -1,0 +1,59 @@
+@import 'colors';
+
+.title-info {
+  font-size: 45px;
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.table-cell {
+  display: table-cell;
+}
+
+.line-info {
+  font-size: 20px;
+  margin: 0 auto;
+  width: 64%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.station {
+  border: 5px solid $curious-blue;
+  border-radius: 17px;
+}
+
+.flight-icon {
+  color: $curious-blue;
+  font-size: 30px;
+}
+
+.title-station::after {
+  background: $curious-blue;
+  content: '';
+  display: block;
+  height: 3px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.font-title-station {
+  color: $red;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.info-detail {
+  font-size: 18px;
+}
+
+.table-footer {
+  display: table-footer-group;
+}
+
+.station-part {
+  padding-bottom: 25px;
+}

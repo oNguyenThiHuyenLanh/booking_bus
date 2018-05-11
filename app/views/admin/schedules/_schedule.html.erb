@@ -1,4 +1,4 @@
-<tr class=<%= (schedule.date <= Date.current) ? "danger" : "success" %>>
+<tr>
   <th scope="row"><%= schedule_counter + 1 %></th>
   <td><%= schedule.route.origin.city %></td>
   <td><%= schedule.route.destination.city %></td>
@@ -9,11 +9,8 @@
   <td><%= schedule.date <= Date.current ? t("admin.schedule.status.done") :
     t("admin.schedule.status.doing") %></td>
   <td>
-    <%= link_to admin_schedule_path(id: schedule.id), class: "btn btn-warning" do %>
+    <%= link_to admin_schedule_path(id: schedule.id), class: "detail-schedule" do %>
       <%= content_tag :i, t("admin.schedule.detail"), class: "fa fa-list-alt" %>
-    <% end %>
-    <%= link_to admin_schedule_path(id: schedule.id), class: "btn btn-primary" do %>
-      <%= content_tag :i, t("admin.schedule.edit"), class: "fa fa-edit" %>
     <% end %>
   </td>
 </tr>

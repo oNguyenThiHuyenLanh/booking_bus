@@ -93,6 +93,9 @@ en:
       will_do: "IN THE FUTURE"
     sidebar:
       dashboard: "Dashboard"
+      model: "Manage Model"
+      showModel: "Show list model"
+      addModel: "Add Model"
       bus: "Manage Bus"
       showBus: "Show list bus"
       addBus: "Add Bus"
