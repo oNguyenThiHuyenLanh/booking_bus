@@ -40,6 +40,7 @@ vi:
   how-to-select-seats: "Bấm vào ghế để chọn hoặc bỏ chọn"
 
   selected-seat: "Ghế đã chọn"
+  unselected-seat: "Ghế chưa chọn"
   booked-seat: "Ghế đã đặt"
   total-price: "Tổng tiền"
   continue: "Tiếp tục"
@@ -196,6 +197,17 @@ vi:
       type: "Loại ghế"
       booked_date: "Ngày đặt chỗ"
       price: "Giá vé ghế"
+    model_bus:
+      new: "Tạo mô hình xe mới"
+      number_of_seats: "Số lượng ghế"
+      number_of_floors: "Số tầng"
+      horizontal: "Hàng ngang"
+      vertical: "Hàng dọc"
+      create_frame: "Tạo khung"
+      create_model: "Tạo mô hình"
+      remain-seats: "Số ghế còn lại"
+      not_enough_seats: "Không đủ ghế"
+      out_of_seat: "Hết chỗ"
   devise:
     failure:
       user:
