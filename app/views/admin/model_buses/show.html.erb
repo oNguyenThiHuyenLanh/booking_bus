@@ -1,0 +1,37 @@
+<% provide :title, t("admin.model_bus.show") %>
+<div class="page-wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="page-header">
+        <%= t "admin.model_bus.show" %> <%= @model_bus.id%>
+      </h1>
+    </div>
+  </div>
+  <div class="frame-bus">
+    <% (1..@model_bus.number_of_floors).each do |floor| %>
+      <div class="floor-bus">
+        <div class="title-floor" id="floor_<%= floor %>">
+          <label><%= t "floor"%> <%= floor %></label>
+        </div>
+        <table class="frame">
+          <% (1..@model_bus.number_of_rows).each do |row| %>
+            <tr class="bus-seat" id="row_<%= row %>">
+              <% (1..@model_bus.number_of_columns).each do |col| %>
+                <td>
+                  <% @model_bus.active_seat_coordinates.each do |seat| %>
+                    <% if seat.existed? row, col, floor %>
+                      <li class="seat-active" data-number="<%= seat.number %>">
+                        <%= seat.number %>
+                      </li>
+                      <% break %>
+                    <% end %>
+                  <% end %>
+                </td>
+              <% end %>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    <% end %>
+  </div>
+</div>

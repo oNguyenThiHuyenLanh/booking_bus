@@ -52,3 +52,15 @@
     cursor: pointer;
   }
 }
+
+.seat-active {
+  background: $white;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-block;
+  height: 28px;
+  list-style-type: none;
+  margin: 4px 7px;
+  text-align: center;
+  width: 50px;
+}

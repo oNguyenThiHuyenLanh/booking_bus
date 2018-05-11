@@ -112,6 +112,7 @@ vi:
     error:
       invalid_schedule: "Không tìm thấy lịch trình!"
       invalid_user: "Không tìm thấy người dùng!"
+      invalid_model: "Không tìm thấy mô hình!"
     success:
       create_success: "Thêm thành công!"
     stt:
@@ -225,6 +226,7 @@ vi:
         floors: "Số tầng"
         rows: "Số hàng"
         cols: "Số cột"
+      show: "Chi tiết mô hình"
     statistic:
       time: "Thời gian"
       total_revenue: "Tổng doanh thu"
