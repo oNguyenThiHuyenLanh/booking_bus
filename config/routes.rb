@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :schedules, only: [:index, :show, :new, :create]
     resources :model_buses, only: [:index, :show, :new]
     resources :statistics, only: [:index]
-    resources :buses, only: [:index, :new]
+    resources :buses, only: [:index, :new, :create]
   end
   devise_for :users
 

@@ -93,6 +93,8 @@ en:
       invalid_model: "Invalid model!"
     success:
       create_success: "Create success!"
+    unsuccess:
+      create_unsuccess: "Create unsuccess!"
     stt:
       now: "NOW"
       will_do: "IN THE FUTURE"
@@ -229,6 +231,7 @@ en:
       number_of_floors: "Number of floors"
       model: "Model"
       create_bus: "Create bus"
+      empty_name: "Empty name"
   devise:
     failure:
       user:

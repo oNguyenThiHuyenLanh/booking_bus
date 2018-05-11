@@ -12,4 +12,21 @@ $(document).on('turbolinks:load', function() {
       }
     });
   });
+  $(document).on('click', '.create-frame', function(){
+    var data_name = $('#input-name-bus').val();
+    if(data_name == ''){
+      alert(I18n.t('admin.bus.empty_name'));
+    }else{
+      var data_model = $(this).attr('data-model');
+      $.ajax({
+        url: '/admin/buses',
+        type: 'POST',
+        dataType: 'script',
+        data: {
+          name: data_name,
+          model_id: data_model
+        }
+      });
+    }
+  });
 });
