@@ -184,6 +184,7 @@ en:
       booked_date: "Booked date"
       price: "Price"
     model_bus:
+      title: "Model bus list"
       new: "Create New Model Bus"
       number_of_seats: "Number of seats"
       number_of_floors: "Number of floors"
@@ -194,6 +195,14 @@ en:
       remain-seats: "Remain seats"
       not_enough_seats: "Not enough seats"
       out_of_seat: "Out of seat"
+      table:
+        stt: "Index"
+        id: "Model ID"
+        seats: "Number of seats"
+        detail: "Detail"
+        floors: "Number of floors"
+        rows: "Number of rows"
+        cols: "Number of columns"
     statistic:
       time: "Times"
       total_revenue: "Sum of revenue"

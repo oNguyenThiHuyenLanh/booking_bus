@@ -22,7 +22,7 @@
         <%= dropdown_link("fa fa-wrench fa-fw", "model", "disable_click") %>
         <ul class="nav nav-second-level collapse" id="model">
           <li>
-            <%= link_to t("admin.sidebar.showModel"), "#",
+            <%= link_to t("admin.sidebar.showModel"), admin_model_buses_path,
               data: {turbolinks: "false"} %>
           </li>
           <li>
