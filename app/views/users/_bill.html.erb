@@ -1,0 +1,14 @@
+<tr>
+  <th scope="row"><%= bill_counter + 1 %></th>
+  <td><%= bill[:bill_id] %></td>
+  <td><%= bill[:origin_address] %></td>
+  <td><%= bill[:destination_address] %></td>
+  <td><%= bill[:date] %></td>
+  <td><%= bill[:time] %></td>
+  <td><%= bill[:total_price] %></td>
+  <td>
+    <%= link_to "#", class: "detail-history" do %>
+      <%= content_tag :i, t("user.history.table.detail"), class: "fa fa-list-alt" %>
+    <% end %>
+  </td>
+</tr>

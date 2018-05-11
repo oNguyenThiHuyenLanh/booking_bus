@@ -1,6 +1,13 @@
 IrresponsibleModule:
   enabled: false
 
+FeatureEnvy:
+  exclude:
+    - "User#bill_list"
+    - "Admin::ModelBusesController#seat_location_params"
+UtilityFunction:
+  exclude:
+    - "User#name_element"
 exclude_paths:
   - 'vendor'
   - 'db/migrate'

@@ -111,6 +111,7 @@ vi:
       hi_admin: "Chào admin"
     error:
       invalid_schedule: "Không tìm thấy lịch trình!"
+      invalid_user: "Không tìm thấy người dùng!"
     success:
       create_success: "Thêm thành công!"
     stt:
@@ -260,4 +261,18 @@ vi:
     introduction: "Xác nhận đặt vé thành công"
     booked_successfully:
       subject: "Đặt vé thành công"
-    
+  user:
+    user_info: "Thông tin người dùng"
+    user_email: "Email"
+    user_phone: "Số điện thoại"
+    user_history: "Lịch sử người dùng"
+    history:
+      table:
+        stt: "STT"
+        origin: "Bến đi"
+        destination: "Bến đến"
+        date: "Ngày đi"
+        time_start: "Giờ đi"
+        total: "Tổng tiền (vnd)"
+        detail: "Chi tiết"
+        bill_id: "Mã hóa đơn"

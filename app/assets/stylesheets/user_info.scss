@@ -1,0 +1,25 @@
+@import 'colors';
+
+.title-info-page {
+  border-bottom: 1px solid $whisper;
+  display: block;
+  font-size: 30px;
+}
+
+.body-info-page {
+  padding: 20px 0;
+}
+
+.title-detail-info {
+  border-bottom: 1px solid $whisper;
+  color: $manatee;
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.detail-info {
+  font-size: 16px;
+  margin-bottom: 20px;
+}

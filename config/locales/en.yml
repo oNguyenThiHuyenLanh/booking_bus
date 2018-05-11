@@ -89,6 +89,7 @@ en:
       hi_admin: "Hi admin"
     error:
       invalid_schedule: "Invalid schedule!"
+      invalid_user: "Invalid user!"
     success:
       create_success: "Create success!"
     stt:
@@ -225,3 +226,19 @@ en:
   errors:
     messages:
       not_saved: "Can not be saved"
+
+  user:
+    user_info: "User's information"
+    user_email: "User's email"
+    user_phone: "User's phone number"
+    user_history: "User's history"
+    history:
+      table:
+        stt: "Index"
+        origin: "Origin"
+        destination: "Destination"
+        date: "Date"
+        time_start: "Time start"
+        total: "Total (vnd)"
+        detail: "Detail"
+        bill_id: "Bill ID"

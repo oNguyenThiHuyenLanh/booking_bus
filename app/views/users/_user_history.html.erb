@@ -1,0 +1,22 @@
+<div class="title-detail-info">
+  <%= t "user.user_history" %>
+</div>
+<div class="row">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+        <th scope="col"><%= t "user.history.table.stt" %></th>
+        <th scope="col"><%= t "user.history.table.bill_id" %></th>
+        <th scope="col"><%= t "user.history.table.origin" %></th>
+        <th scope="col"><%= t "user.history.table.destination" %></th>
+        <th scope="col"><%= t "user.history.table.date" %></th>
+        <th scope="col"><%= t "user.history.table.time_start" %></th>
+        <th scope="col"><%= t "user.history.table.total" %></th>
+        <th scope="col"><%= t "user.history.table.detail" %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render partial: "users/bill", collection: user.bill_list %>
+    </tbody>
+  </table>
+</div>
