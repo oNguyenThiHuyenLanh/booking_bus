@@ -77,6 +77,9 @@ vi:
     booking:
       successfully: "Đặt vé thành công. Vui lòng kiểm tra email của bạn"
       unsuccessfully: "Đặt vé không thành công."
+    create_model_bus:
+      successfully: "Tạo mô hình xe thành công"
+      unsuccessfully: "Tạo mô hình xe không thành công"
   close: "Đóng"
   notification: "Thông báo đặt vé"
   date:

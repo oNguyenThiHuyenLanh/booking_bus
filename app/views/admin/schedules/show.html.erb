@@ -5,7 +5,7 @@
       <ol class="breadcrumb">
         <li class="breadcrumb-item">
           <%= link_to t("admin.sidebar.showSchedule"), admin_schedules_path,
-            data: {turbolinks: "false"} %>
+          data: {turbolinks: "false"} %>
         </li>
         <li class="breadcrumb-item active"><%= t "detail" %></li>
       </ol>
@@ -31,7 +31,7 @@
             <div class="col-md-6">
               <div class="">
                 <%= @schedule.origin_address %> -
-                  <%= @schedule.destination_address %>
+                <%= @schedule.destination_address %>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@
             </div>
             <div class="info-detail">
               <%= t "admin.schedule.show.location" %>
-              <%= @schedule.start.name %>, <%= @schedule.route.origin.city %>
+                <%= @schedule.start.name %>, <%= @schedule.route.origin.city %>
             </div>
             <div class="info-detail">
               <%= t "admin.schedule.show.at" %><%= @schedule.time_start %>

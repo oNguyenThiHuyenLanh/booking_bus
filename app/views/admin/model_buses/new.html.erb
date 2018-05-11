@@ -71,5 +71,43 @@
   </div>
   <div class="frame-bus">
   </div>
+  <div class="modal fade" id="create_model_bus_successfully" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"
+            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel"><%= t "notification" %></h4>
+        </div>
+        <div class="modal-body">
+          <p><%= t "message.create_model_bus.successfully" %></p>
+        </div>
+        <div class="modal-footer">
+          <%= button_tag t("close"), class: "btn btn-default",
+            data: {dismiss: "modal"} %>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="modal fade" id="create_model_bus_unsuccessfully" tabindex="-1" role="dialog"
+    aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"
+            aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel"><%= t "notification" %></h4>
+        </div>
+        <div class="modal-body">
+          <p><%= t "message.create_model_bus.unsuccessfully" %></p>
+        </div>
+        <div class="modal-footer">
+          <%= button_tag t("close"), class: "btn btn-default",
+            data: {dismiss: "modal"} %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
