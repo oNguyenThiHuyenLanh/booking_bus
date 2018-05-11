@@ -1,0 +1,63 @@
+@import 'colors';
+
+.name-bus {
+  padding-bottom: 5px;
+
+  .name-field {
+    padding-left: 0;
+
+    .input-name-bus {
+      border-radius: 5px;
+      width: 88%;
+    }
+  }
+}
+
+.frame-model-bus-show {
+  padding: 30px 0;
+  text-align: center;
+
+  .frame-bus-model {
+    border: 3px solid $mali;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+    text-align: center;
+  }
+}
+
+.select-bus {
+  background: $white;
+  border-radius: 5px;
+  width: 62px;
+}
+
+.point {
+  background: $silver-sand;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-block;
+  height: 16px;
+  list-style-type: none;
+  margin: 4px 7px;
+  width: 19px;
+}
+
+.frame-model tr td {
+  display: inline-table;
+  height: 24px;
+  width: 33px;
+}
+
+.title-model {
+  font-size: 29px;
+  margin-bottom: 10px;
+}
+
+.floor-bus-model {
+  border: 3px solid $pink-swan;
+  display: inline-block;
+}
+
+.out-box {
+  height: 400px;
+}
