@@ -39,7 +39,7 @@
         <%= dropdown_link("fa fa-wrench fa-fw", "bus", "disable_click") %>
         <ul class="nav nav-second-level collapse" id="bus">
           <li>
-            <%= link_to t("admin.sidebar.showBus"), "#",
+            <%= link_to t("admin.sidebar.showBus"), admin_buses_path,
               data: {turbolinks: "false"} %>
           </li>
           <li>

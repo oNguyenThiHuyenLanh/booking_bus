@@ -1,0 +1,12 @@
+<tr>
+  <th scope="row"><%= bus_counter + 1 %></th>
+  <td><%= bus.id %></td>
+  <td><%= bus.name %></td>
+  <td><%= bus.number_of_seats %></td>
+  <td><%= bus.model_bus_id %></td>
+  <td>
+    <%= link_to "#", class: "detail-bus" do %>
+      <%= content_tag :i, t("admin.bus.table.detail"), class: "fa fa-list-alt" %>
+    <% end %>
+  </td>
+</tr>

@@ -211,6 +211,15 @@ en:
       select_year: "Select year"
       by_months: "By months"
       by_years: "By years"
+    bus:
+      title: "Bus list"
+      table:
+        stt: "Index"
+        id: "Model ID"
+        name: "Name"
+        seats: "Number of seats"
+        detail: "Detail"
+        model_id: "Model ID"
   devise:
     failure:
       user:
