@@ -1,4 +1,6 @@
 module Admin::ScheduleHelper
+  attr_reader :route
+
   def list_items type_items
     @types = type_items
     @types.map{|type_item| [type_item.name, type_item.id]}
@@ -19,5 +21,12 @@ module Admin::ScheduleHelper
       "<i class='glyphicon glyphicon-list-alt'></i>".html_safe +
         t("admin.schedule.show.detail_seated")
     end
+  end
+
+  def find_route
+    @route = Route.find_by id: params[:route_id]
+
+    return if route
+    flash[:danger] = t "admin.error.invalid_route"
   end
 end

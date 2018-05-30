@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap-select
+//= require jquery.validate
 //= require_tree .
 
 document.addEventListener("turbolinks:load", function() {

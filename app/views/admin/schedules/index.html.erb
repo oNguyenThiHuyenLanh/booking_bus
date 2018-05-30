@@ -3,9 +3,9 @@
   <div class="row">
     <div class="col-lg-12">
       <h1 class="page-header"><%= t "admin.schedule.list_schedule" %>
-        <button type="button" class="btn btn-info"><i class="fa fa-plus"></i>
-        <%= t "admin.schedule.add" %>
-      </button>
+        <%= link_to new_admin_schedule_path, class: "btn btn-info" do %>
+          <%= content_tag :i, t("admin.schedule.add"), class: "fa fa-plus" %>
+        <% end %>
       </h1>
     </div>
   </div>

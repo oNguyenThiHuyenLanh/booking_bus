@@ -1,0 +1,193 @@
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h4 class="header-schedule"><%= t "admin.sidebar.addSchedule" %>
+        </h4>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <%= form_for [:admin, support.schedule], html: {id: "booking-form",
+            class: "form-horizontal form-bordered"} do |f| %>
+            <div class="progress-wrap">
+              <div class="line-progress-bar">
+                <div class="line"></div>
+                <ul class="checkout-bar">
+                  <li class="progressbar-dots active"><i class="fa fa-plane">
+                    </i><span><%= t "admin.schedule.create.step1" %></span></li>
+                  <li class="progressbar-dots"><span>
+                    <%= t "admin.schedule.create.step2" %></span></li>
+                  <li class="progressbar-dots"><span>
+                    <%= t "admin.schedule.create.step_final" %></span></li>
+                </ul>
+              </div>
+            </div>
+            <br><br>
+            <div class="tab-content col-lg-12">
+              <div class="tab-pane" id="step1">
+                <ul>
+                  <li>
+                    <div class="errorTxt col-lg-1"></div>
+                    <div class="col-lg-3">
+                      <%= f.label "route_id",
+                        t("admin.schedule.create.select_route") %>
+                    </div>
+                    <div class="col-lg-8">
+                      <%= f.select :route_id,
+                        options_for_select(list_items(support.routes)),
+                        {prompt: t("admin.schedule.create.select_sth")},
+                        {class: "required"} %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="errorTxt col-lg-1"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :start_station_id,
+                        t("admin.schedule.create.select_origin") %>
+                    </div>
+                    <div class="col-lg-8">
+                      <%= f.select :start_station_id, "",
+                        {prompt: t("admin.schedule.create.select_sth")},
+                        {class: "required"} %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="errorTxt col-lg-1"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :final_station_id,
+                        t("admin.schedule.create.select_destination") %>
+                    </div>
+                    <div class="col-lg-8">
+                      <%= f.select :final_station_id, "",
+                        {prompt: t("admin.schedule.create.select_sth")},
+                        {class: "required"} %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-8">
+                      <button class="next-btn next-btn1" type="button">
+                        <%= t "admin.schedule.create.next" %>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane" id="step2">
+                <ul>
+                  <li>
+                    <div class="errorTxt col-lg-2"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :date,
+                        t("admin.schedule.create.select_date") %>
+                    </div>
+                    <div class="col-lg-6">
+                      <%= f.date_field :date, min: Date.today,
+                      class: "required" %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="errorTxt col-lg-2"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :interval_id,
+                        t("admin.schedule.create.interval") %>
+                    </div>
+                    <div class="col-lg-6">
+                      <%= f.select :interval_id,
+                        options_for_select(list_items(support.intervals)),
+                        {prompt: t("admin.schedule.create.select_sth")},
+                        {class: "required"} %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="errorTxt col-lg-2"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :time_start,
+                        t("admin.schedule.create.time_start") %>
+                    </div>
+                    <div class="col-lg-6">
+                      <%= f.time_field :time_start, {class: "required"} %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="errorTxt col-lg-2"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :time_spent,
+                        t("admin.schedule.create.time_during")%>
+                    </div>
+                    <div class="col-lg-6">
+                      <%= f.number_field :time_spent, {class: "required"} %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                      <button class="next-btn back-btn back-btn1" type="button">
+                        <%= t "admin.schedule.create.back" %>
+                      </button>
+                    </div>
+                    <div class="col-lg-3">
+                      <button class="next-btn next-btn2" type="button">
+                        <%= t "admin.schedule.create.next" %>
+                      </button>
+                    </div>
+                    <div class="col-lg-3"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane" id="step3">
+                <ul>
+                  <li>
+                    <div class="errorTxt col-lg-2"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :bus_id, t("admin.schedule.create.select_bus") %>
+                    </div>
+                    <div class="col-lg-6">
+                      <%= f.select "bus_id",
+                        options_for_select(list_items(support.buses)),
+                        {prompt: t("admin.schedule.create.select_sth")},
+                        {class: "required"} %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="errorTxt col-lg-2"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :price, t("admin.schedule.create.price") %>
+                    </div>
+                    <div class="col-lg-6">
+                      <%= f.number_field :price, {class: "required"} %>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="errorTxt col-lg-2"></div>
+                    <div class="col-lg-3">
+                      <%= f.label :des,
+                        t("admin.schedule.create.description") %>
+                    </div>
+                    <div class="col-lg-6">
+                      <textarea name="des"></textarea>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                      <button class="next-btn back-btn back-btn2" type="button">
+                        <%= t "admin.schedule.create.back" %>
+                      </button>
+                    </div>
+                    <div class="col-lg-3">
+                      <%= f.submit t("admin.schedule.create.submit"),
+                        class: "submit-btn" %>
+                    <div class="col-lg-3"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>

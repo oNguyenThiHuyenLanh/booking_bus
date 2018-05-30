@@ -1,0 +1,19 @@
+<% provide :title, t("admin.schedule.title") %>
+
+<div class="page-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+          <%= link_to t("admin.sidebar.showSchedule"), admin_schedules_path,
+            data: {turbolinks: "false"} %>
+        </li>
+        <li class="breadcrumb-item active"><%= t "admin.schedule.add" %></li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="row">
+    <%= render "create", support: @support %>
+  </div>
+</div>

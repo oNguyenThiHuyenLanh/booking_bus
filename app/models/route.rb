@@ -7,6 +7,10 @@ class Route < ApplicationRecord
   has_many :schedules
   has_many :pick_addresses, through: :route_pick_addresses
 
+  def name
+    origin.city + "-" + destination.city
+  end
+
   class << self
     def find_routes origin_id, destination_id
       Route.where(origin_id: origin_id,

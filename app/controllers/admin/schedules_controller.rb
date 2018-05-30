@@ -1,5 +1,7 @@
 module Admin
   class SchedulesController < BaseController
+    include ScheduleHelper
+
     before_action :filter
     before_action :find_schedule, only: %i(show)
 
@@ -12,12 +14,30 @@ module Admin
       end
     end
 
+    def new
+      if params[:route_id]
+        list_pick
+      else
+        @support = Supports::ManageSchedulesSupport.new
+      end
+    end
+
     def show
     end
 
+    attr_reader :road_ids, :schedule
+
     private
 
-    attr_reader :road_ids, :schedule
+    def list_pick
+      find_route
+      data = {
+        origin_pick: PickAddress.list_pick_add(route.origin_id),
+        destination_pick: PickAddress.list_pick_add(route.destination_id)
+      }
+
+      render json: data
+    end
 
     def filter
       p_road_ids = params[:road_ids]
