@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   devise_for :users
 
   resources :schedules, only: :index
+  get "confirm" => "booking#new"
+  post "booking" => "booking#create"
 end

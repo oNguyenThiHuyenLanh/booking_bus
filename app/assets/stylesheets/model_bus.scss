@@ -1,0 +1,61 @@
+@import './colors';
+
+.bus-seat {
+  display: table;
+
+  .selected {
+    background-color: $selected;
+    border: 1px solid $black;
+  }
+}
+
+.seat {
+  background: $white;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-block;
+  height: 28px;
+  list-style-type: none;
+  margin: 4px 7px;
+  text-align: center;
+  width: 50px;
+
+  &:hover {
+    background: $maya-blue;
+    cursor: pointer;
+  }
+}
+
+table.frame tr td {
+  display: inline-table;
+  height: 40px;
+  width: 65px;
+}
+
+.booked {
+  background: $booked;
+  border: 1px dashed $black;
+
+  &:hover {
+    background: $booked;
+    cursor: not-allowed;
+  }
+}
+
+.unbooked {
+  background-color: $white;
+  border: 1px solid $black;
+}
+
+.floor-bus {
+  border: 3px solid $pink-swan;
+  display: inline-block;
+}
+
+.title-floor {
+  padding-bottom: 14px;
+
+  label {
+    font-size: 20px;
+  }
+}

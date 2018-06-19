@@ -1,23 +1,23 @@
 <% (1..schedule.model_bus.number_of_floors).each do |floor| %>
   <div class="floor-bus">
-    <div class="title-floor" id="floor_<%=floor%>">
+    <div class="title-floor" id="floor_<%= floor %>">
       <label><%= t "floor"%> <%= floor %></label>
     </div>
-    <table class="frame">
+    <table class="frame" data-schedule="<%= schedule.id %>">
       <% (1..schedule.model_bus.number_of_rows).each do |row| %>
-        <tr class="bus-seat" id="row_<%=row %>">
-          <%(1..schedule.model_bus.number_of_columns).each do |col| %>
+        <tr class="bus-seat" id="row_<%= row %>">
+          <% (1..schedule.model_bus.number_of_columns).each do |col| %>
             <td>
               <% schedule.active_seat_coordinates.each do |seat| %>
                 <% if seat.existed? row, col, floor %>
                   <% if schedule.no_of_booked_seat_array.include? seat.number %>
-                    <li id="seat_<%=row%>_<%=col%>" class="seat booked-seat">
-                      <%=seat.number%>
-                    </li>
+                    <li class="seat booked"
+                      data-schedule="<%= schedule.id %>" data-number="<%= seat.number %>">
+                      <%= seat.number %></li>
                   <% else %>
-                    <li id="seat_<%=row%>_<%=col%>" class="seat">
-                      <%=seat.number%>
-                    </li>
+                    <li class="seat"
+                      data-schedule="<%= schedule.id %>" data-number="<%= seat.number %>">
+                      <%= seat.number %></li>
                   <% end %>
                   <% break %>
                 <% end %>

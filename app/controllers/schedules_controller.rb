@@ -9,6 +9,7 @@ class SchedulesController < ApplicationController
   private
 
   attr_reader :schedules
+
   def search_params
     params.require(:search).permit :origin_address, :destination_address,
       :date, :interval
