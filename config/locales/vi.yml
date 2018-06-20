@@ -127,6 +127,10 @@ vi:
       addSchedule: "Thêm lịch trình"
       statisticSchedule: "Thống kê lịch trình"
       statisticPassenger: "Thống kê khách hàng"
+      statisticRevenueByRoute: "Thống kê doanh thu theo tuyến đường"
+      statisticRevenueByTime: "Thống kê doanh thu theo thời gian"
+      statisticPassengerByRoute: "Thống kê khách hàng theo tuyến đường"
+      statisticPassengerByTime: "Thống kê khách hàng theo thời gian"
     schedule:
       title: "Lịch trình"
       list_schedule: "Danh sách lịch trình xe "
@@ -208,6 +212,14 @@ vi:
       remain-seats: "Số ghế còn lại"
       not_enough_seats: "Không đủ ghế"
       out_of_seat: "Hết chỗ"
+    statistic:
+      time: "Thời gian"
+      total_revenue: "Tổng doanh thu"
+      select_types: "Chọn thống kê theo"
+      select_type: "Chọn loại"
+      select_year: "Chọn năm"
+      by_months: "Theo các tháng"
+      by_years: "Theo các năm"
   devise:
     failure:
       user:

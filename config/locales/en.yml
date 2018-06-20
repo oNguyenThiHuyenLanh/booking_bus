@@ -108,6 +108,10 @@ en:
       addSchedule: "Add schedule"
       statisticSchedule: "Statistics schedule"
       statisticPassenger: "Statistics passenger"
+      statisticRevenueByRoute: "Revenue statistics by route"
+      statisticRevenueByTime: "Revenue statistics by time"
+      statisticPassengerByRoute: "Statistics passenger by route"
+      statisticPassengerByTime: "Statistics passenger by time"
     schedule:
       title: "Schedules"
       list_schedule: "List schedules"
@@ -189,6 +193,14 @@ en:
       remain-seats: "Remain seats"
       not_enough_seats: "Not enough seats"
       out_of_seat: "Out of seat"
+    statistic:
+      time: "Times"
+      total_revenue: "Sum of revenue"
+      select_types: "Select type time for statistic"
+      select_type: "Select type"
+      select_year: "Select year"
+      by_months: "By months"
+      by_years: "By years"
   devise:
     failure:
       user:

@@ -74,11 +74,19 @@
           "disable_click") %>
         <ul class="nav nav-second-level collapse" id="statistic">
           <li>
-            <%= link_to t("admin.sidebar.statisticSchedule"), "#",
+            <%= link_to t("admin.sidebar.statisticRevenueByRoute"),
+              admin_statistics_path, data: {turbolinks: "false"} %>
+          </li>
+          <li>
+            <%= link_to t("admin.sidebar.statisticRevenueByTime"), "#",
               data: {turbolinks: "false"} %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.statisticPassenger"), "#",
+            <%= link_to t("admin.sidebar.statisticPassengerByRoute"), "#",
+              data: {turbolinks: "false"} %>
+          </li>
+          <li>
+            <%= link_to t("admin.sidebar.statisticPassengerByTime"), "#",
               data: {turbolinks: "false"} %>
           </li>
         </ul>
