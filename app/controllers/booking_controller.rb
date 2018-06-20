@@ -5,7 +5,7 @@ class BookingController < ApplicationController
 
   def create
     seats_array = take_seat_data
-    schedule = Schedule.find_by id: params[:schedule_id]
+    @schedule = Schedule.find_by id: params[:schedule_id]
     if schedule && !schedule.seats_existed(seats_array)
       create_bill_and_respond
     else
@@ -15,11 +15,13 @@ class BookingController < ApplicationController
 
   private
 
+  attr_reader :schedule
+
   def bill_params
     {
       seats_array: take_seat_data,
-      schedule_id: params[:schedule_id],
-      user_id: current_user.id
+      schedule: schedule,
+      user: current_user
     }
   end
 
