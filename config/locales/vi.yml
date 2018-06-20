@@ -112,6 +112,9 @@ vi:
       will_do: "SẮP ĐI"
     sidebar:
       dashboard: "Bảng điều khiển"
+      model: "Quản lý mô hình"
+      showModel: "Danh sách mô hình"
+      addModel: "Thêm mô hình"
       bus: "Quản lý xe"
       showBus: "Danh sách xe"
       addBus: "Thêm xe"

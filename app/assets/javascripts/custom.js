@@ -137,7 +137,9 @@ function printPrice(seats, scheduleId) {
 
 function printTicket(seats, scheduleId) {
   $('.booked-seat').data('schedule', scheduleId).empty();
-  $('.booked-seat').data('schedule', scheduleId).append(seats.join());
+  for(var i = 0; i < seats.length; i++){
+    $('.booked-seat').data('schedule', scheduleId).append('<span>' + seats[i] + '</span>, ');
+  }
 }
 
 function price(seats) {
