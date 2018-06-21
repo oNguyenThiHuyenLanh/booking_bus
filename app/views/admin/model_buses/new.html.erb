@@ -1,0 +1,75 @@
+<% provide :title, t("admin.model_bus.new") %>
+<div class="page-wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="page-header">
+        <%= t "admin.model_bus.new" %>
+      </h1>
+    </div>
+  </div>
+
+  <div class="creation-div">
+    <div class="row">
+      <div class="col-md-4 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-6">
+            <label><%= t "admin.model_bus.number_of_seats" %></label>
+          </div>
+          <div class="col-md-6 right-pos">
+            <%= select_tag "number_of_seats",
+              options_for_select(Settings.min_seats..Settings.max_seats,
+              Settings.min_seats), class: "select-model" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-offset-2">
+        <div class="row">
+          <div class="col-md-6">
+            <label><%= t "admin.model_bus.number_of_floors" %></label>
+          </div>
+          <div class="col-md-6 right-pos">
+            <%= select_tag "number_of_floors",
+              options_for_select(Settings.min_floors..Settings.max_floors,
+              Settings.min_floors), class: "select-model" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 col-md-offset-1">
+        <div class="row">
+          <div class="col-md-6">
+            <label><%= t "admin.model_bus.horizontal" %></label>
+          </div>
+          <div class="col-md-6 right-pos">
+            <%= select_tag "number_of_horizontal_line",
+              options_for_select(Settings.min_horizontal..Settings.max_horizontal,
+              Settings.min_horizontal), class: "select-model" %>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-md-offset-2">
+        <div class="row">
+          <div class="col-md-6">
+            <label><%= t "admin.model_bus.vertical" %></label>
+          </div>
+          <div class="col-md-6 right-pos">
+            <%= select_tag "number_of_vertical_line",
+              options_for_select(Settings.min_vertical..Settings.max_vertical,
+              Settings.min_vertical), class: "select-model" %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <button type="button" class="btn btn-primary create-frame">
+        <%= t "admin.model_bus.create_frame" %>
+      </button>
+    </div>
+  </div>
+  <div class="frame-bus">
+  </div>
+
+</div>

@@ -37,6 +37,7 @@ en:
   floor_2: "2nd floor"
   how-to-select-seats: "Click to select a seat and click again to deselect"
   selected-seat: "Selected seat"
+  unselected-seat: "Unselected seat"
   booked-seat: "Booked seat"
   total-price: "Total price"
   continue: "Continue"
@@ -177,6 +178,17 @@ en:
       type: "Type of seat"
       booked_date: "Booked date"
       price: "Price"
+    model_bus:
+      new: "Create New Model Bus"
+      number_of_seats: "Number of seats"
+      number_of_floors: "Number of floors"
+      horizontal: "Horizontal line"
+      vertical: "Vertical line"
+      create_frame: "Create frame"
+      create_model: "Create model"
+      remain-seats: "Remain seats"
+      not_enough_seats: "Not enough seats"
+      out_of_seat: "Out of seat"
   devise:
     failure:
       user:

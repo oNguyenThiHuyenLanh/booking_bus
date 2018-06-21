@@ -19,9 +19,9 @@
           title: t("admin.schedule.filter_by_interval"), class: "selectpicker",
           multiple: true, id: "select-interval" %>
 
-        <button type="button" class="btn btn-primary"><i class="fa fa-plus"></i>
-          <%= t "admin.schedule.add" %>
-        </button>
+        <%= link_to new_admin_schedule_path, class: "btn btn-primary add-btn" do %>
+          <%= content_tag :i, t("admin.schedule.add"), class: "fa fa-plus" %>
+        <% end %>
       </div>
 
     </div>

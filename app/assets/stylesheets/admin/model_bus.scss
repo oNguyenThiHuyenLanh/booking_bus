@@ -1,0 +1,54 @@
+@import 'colors';
+@import '../colors';
+
+.select-model {
+  background: $white;
+  border-radius: 5px;
+  width: 62px;
+}
+
+.right-pos {
+  text-align: right;
+}
+
+.creation-div {
+  background: $white-smoke;
+  border: 3px solid $malibu;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 0 auto;
+  padding: 25px 0 10px;
+  width: 68%;
+}
+
+.frame-bus {
+  padding: 30px 0;
+  text-align: center;
+}
+
+.unselected {
+  background-color: $white;
+  border: 1px solid $black;
+}
+
+.selected {
+  background-color: $selected;
+  border: 1px solid $black;
+}
+
+.seat-model {
+  background: $white;
+  border: 1px solid;
+  border-radius: 10px;
+  display: inline-block;
+  height: 28px;
+  list-style-type: none;
+  margin: 4px 7px;
+  text-align: center;
+  width: 50px;
+
+  &:hover {
+    background: $maya-blue;
+    cursor: pointer;
+  }
+}
