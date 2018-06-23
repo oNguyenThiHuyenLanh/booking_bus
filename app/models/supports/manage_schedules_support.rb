@@ -3,10 +3,6 @@ class Supports::ManageSchedulesSupport
     @schedules ||= Schedule.all.order_by_date
   end
 
-  def roads
-    @roads ||= Road.all
-  end
-
   def intervals
     @intervals ||= Interval.all
   end

@@ -16,5 +16,9 @@ class Route < ApplicationRecord
       Route.where(origin_id: origin_id,
         destination_id: destination_id).pluck :id
     end
+
+    def list_routes ids
+      ids.blank? ? Route.all.pluck(:id) : ids
+    end
   end
 end

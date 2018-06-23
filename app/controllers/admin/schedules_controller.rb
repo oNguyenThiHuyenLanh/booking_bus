@@ -37,7 +37,7 @@ module Admin
 
     private
 
-    attr_reader :road_ids, :schedule
+    attr_reader :schedule
 
     def list_pick
       find_route
@@ -50,16 +50,12 @@ module Admin
     end
 
     def filter
-      p_road_ids = params[:road_ids]
-      p_interval_ids = params[:interval_ids]
-      @schedules = do_filter(p_road_ids, p_interval_ids) if p_road_ids ||
-                                                            p_interval_ids
+      @schedules = do_filter if params[:route_ids] || params[:interval_ids]
     end
 
-    def do_filter param_road_ids, param_interval_ids
-      @road_ids = param_road_ids
-      interval_ids = Interval.list_intervals param_interval_ids
-      route_ids = Road.list_routes road_ids
+    def do_filter
+      interval_ids = Interval.list_intervals params[:interval_ids]
+      route_ids = Route.list_routes params[:route_ids]
       Schedule.filter_schedules route_ids, interval_ids
     end
 

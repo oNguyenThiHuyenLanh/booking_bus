@@ -116,7 +116,7 @@ en:
       title: "Schedules"
       list_schedule: "List schedules"
       filter: "Filter  "
-      filter_by_route: "Filter by route"
+      filter_by_routes: "Filter by route"
       filter_by_road: "Filter by road"
       filter_by_interval: "Filter by interval"
       add: " Add"

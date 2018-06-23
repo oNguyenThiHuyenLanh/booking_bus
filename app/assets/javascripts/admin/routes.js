@@ -1,13 +1,13 @@
 $(document).on('turbolinks:load', function() {
   $('.selectpicker').on('change', function() {
-    var data_road = $('#select-road').val();
+    var data_route = $('#select-routes').val();
     var data_interval = $('#select-interval').val();
     $.ajax({
       url: '/admin/schedules',
       type: 'GET',
       dataType: 'script',
       data: {
-        road_ids: data_road,
+        route_ids: data_route,
         interval_ids: data_interval
       }
     });
