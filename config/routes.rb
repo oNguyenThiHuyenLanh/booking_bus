@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get "/bus/new"
     resources :schedules, only: [:index, :show, :new, :create]
     resources :model_buses, only: [:new]
+    resources :statistics, only: [:index]
   end
   devise_for :users
 

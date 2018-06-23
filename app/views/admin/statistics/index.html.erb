@@ -1,0 +1,49 @@
+<% provide :title, t("admin.sidebar.statisticRevenueByRoute") %>
+<div class="page-wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <h1 class="page-header">
+        <%= t "admin.sidebar.statisticRevenueByRoute" %>
+      </h1>
+    </div>
+  </div>
+  <div>
+    <div class="errorTxt col-md-12"></div>
+  </div>
+    <div class="filter-part">
+      <div class="row">
+        <div class="col-md-3">
+          <%= label "route_id",
+            t("admin.schedule.create.select_route") %>
+        </div>
+        <div class="col-md-3">
+          <%= select_tag :route_id, options_for_select(list_items(@routes)),
+            prompt: t("admin.schedule.create.select_sth") %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <%= label_tag "route_id",
+            t("admin.statistic.select_types") %>
+        </div>
+        <div class="col-md-3">
+          <%= select_tag :select_type, options_for_select(list_type),
+            {prompt: t("admin.statistic.select_type")}%>
+        </div>
+        <div class="col-md-2" id="year">
+          <%= select_tag "select_year",
+            options_for_select(2015..2018),
+            {prompt: t("admin.statistic.select_year")} %>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-primary" type="button">
+          <%= t "admin.statistic.submit" %>
+          </button>
+        </div>
+      </div>
+    </div>
+  <div class="row">
+    <%= line_chart @data, xtitle: t("admin.statistic.time"),
+      ytitle: t("admin.statistic.total_revenue") %>
+  </div>
+</div>
