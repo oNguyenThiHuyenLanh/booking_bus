@@ -14,4 +14,5 @@ Rails.application.routes.draw do
   resources :schedules, only: :index
   get "confirm" => "booking#new"
   post "booking" => "booking#create"
+  resources :users, only: :show
 end
