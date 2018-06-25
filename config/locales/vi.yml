@@ -135,7 +135,7 @@ vi:
       title: "Lịch trình"
       list_schedule: "Danh sách lịch trình xe "
       filter: "Lọc  "
-      filter_by_route: "Lọc theo chặng đường"
+      filter_by_routes: "Lọc theo chặng đường"
       filter_by_road: "Lọc theo cung đường"
       filter_by_interval: "Lọc theo khung giờ"
       add: " Thêm"
