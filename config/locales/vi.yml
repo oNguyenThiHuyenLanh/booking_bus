@@ -233,6 +233,15 @@ vi:
       select_year: "Chọn năm"
       by_months: "Theo các tháng"
       by_years: "Theo các năm"
+    bus:
+      title: "Danh sách xe"
+      table:
+        stt: "STT"
+        id: "Mã xe"
+        name: "Tên xe"
+        seats: "Số ghế"
+        detail: "Chi tiết"
+        model_id: "Mã mô hình"
   devise:
     failure:
       user:
