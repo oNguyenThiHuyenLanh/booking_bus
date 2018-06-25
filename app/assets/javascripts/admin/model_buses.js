@@ -1,3 +1,7 @@
+list_seat_first_floor = [];
+list_seat_second_floor = [];
+first_items = [];
+second_items = [];
 $(document).ready(function() {
   $('.create-frame').click(function(){
     var number_of_seats = $('#number_of_seats').val();
@@ -21,7 +25,8 @@ $(document).ready(function() {
           frame += '<tr class="bus-seat" id="row_' + (row + 1) + '">';
           for(var col = 0; col < number_of_horizontal_line; col++){
             frame += '<td>'
-              + '<li id="seat_' + (row + 1) + '_' + (col + 1) + '" class="seat-model">'
+              + '<li id="seat_' + (row + 1) + '_' + (col + 1) +
+                '"class="seat-model" data-floor="'+ (i + 1) +'">'
               + '</li>'
               + '</td>';
           }
@@ -47,7 +52,7 @@ $(document).ready(function() {
         + '</ul>'
         + '</div>';
       frame += '<div class="row text-center">'
-        + '<button type="button" class="btn btn-primary create-frame">'
+        + '<button type="button" id="create-model-bus" class="btn btn-primary create-frame">'
         + I18n.t('admin.model_bus.create_model')
         + '</button>'
         + '</div>';
@@ -65,8 +70,73 @@ $(document).on('click','.seat-model', function(){
       alert(I18n.t('admin.model_bus.out_of_seat'));
     }else{
       $(this).addClass('selected');
+      let temp = $(this).attr('id');
+      let location_str = temp.match(/\d/g);
+      let location = location_str.map(function(i) {
+        return parseInt(i, 10);
+      });
+
+      let floor = parseInt($(this).data('floor'));
+      if(floor == 1) {
+        list_seat_first_floor.push(location);
+      } else {
+        list_seat_second_floor.push(location);        
+      }
       remain_seats--;
     }
   }
   $('.remain-seats').text(remain_seats);
+});
+
+$(document).on('click', '#create-model-bus', function() {
+  let rows = $('#number_of_horizontal_line').val();
+  let columns = $('#number_of_vertical_line').val();
+  var number = 0;
+  for (let i=1; i<=rows; i++) {
+    for(let j=1; j<=columns; j++) {
+      let a = [i,j];
+      let check = list_seat_first_floor.some(
+        r => r.every((value, index) =>  a[index] == value)
+      );
+      if (check) {
+        number++;
+        first_items.push([i, j, number, 1]);
+      }
+    }
+  }
+
+  for (let i=1; i<=rows; i++) {
+    for(let j=1; j<=columns; j++) {
+      let a = [i,j];
+      let check = list_seat_second_floor.some(
+        r => r.every((value, index) =>  a[index] == value)
+      );
+      if (check) {
+        number++;
+        second_items.push([i, j, number, 2]);
+      }
+    }
+  }
+
+  $.ajax({
+    url: '/admin/model_buses',
+    method: 'POST',
+    authenticity_token: $('meta[name="csrf-token"]').attr('content'),
+    data: {
+      list_seat_first_floor: first_items,
+      list_seat_second_floor: second_items,
+      amount_of_seats: $('#number_of_seats').val(),
+      number_of_floors: $('#number_of_floors').val(),
+      number_of_rows: rows,
+      number_of_columns: columns
+    },
+    success: function(dataResponse) {
+      if(dataResponse.status == true) {
+        $('#create_model_bus_successfully').modal({'show': true});
+      } else {
+        $('#create_model_bus_unsuccessfully').modal({'show': true});
+      }
+      setInterval(function(){ location.replace('/admin/schedules');}, 3000);
+    }
+  });
 });
