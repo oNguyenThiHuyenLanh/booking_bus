@@ -6,7 +6,7 @@
   <td><%= model_bus.number_of_rows %></td>
   <td><%= model_bus.number_of_columns %></td>
   <td>
-    <%= link_to "#", class: "detail-bus" do %>
+    <%= link_to admin_model_bus_path(model_bus.id), class: "detail-bus" do %>
       <%= content_tag :i, t("admin.model_bus.table.detail"), class: "fa fa-list-alt" %>
     <% end %>
   </td>

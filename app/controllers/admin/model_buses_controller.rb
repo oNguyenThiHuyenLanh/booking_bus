@@ -6,6 +6,13 @@ module Admin
       @model_buses = ModelBus.all
     end
 
+    def show
+      @model_bus = ModelBus.find_by id: params[:id]
+      return if model_bus
+      flash[:danger] = t "admin.error.invalid_model"
+      redirect_to admin_model_buses_path
+    end
+
     def new; end
 
     def create
@@ -16,7 +23,7 @@ module Admin
 
     private
 
-    attr_reader :seat_location
+    attr_reader :seat_location, :model_bus
 
     def check_params
       render json: {status: false} unless

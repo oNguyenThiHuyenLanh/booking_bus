@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     root "home#show"
     get "/bus/new"
     resources :schedules, only: [:index, :show, :new, :create]
-    resources :model_buses, only: [:index, :new]
+    resources :model_buses, only: [:index, :show, :new]
     resources :statistics, only: [:index]
     resources :buses, only: [:index]
   end

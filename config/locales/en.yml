@@ -90,6 +90,7 @@ en:
     error:
       invalid_schedule: "Invalid schedule!"
       invalid_user: "Invalid user!"
+      invalid_model: "Invalid model!"
     success:
       create_success: "Create success!"
     stt:
@@ -203,6 +204,7 @@ en:
         floors: "Number of floors"
         rows: "Number of rows"
         cols: "Number of columns"
+      show: "Detail model"
     statistic:
       time: "Times"
       total_revenue: "Sum of revenue"
