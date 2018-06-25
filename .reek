@@ -8,6 +8,9 @@ FeatureEnvy:
 UtilityFunction:
   exclude:
     - "User#name_element"
+    - "Admin::BusesController#do_filter"
+    - "ModelBus#filter_seats_blank"
+    - "ModelBus#filter_seats_present"
 exclude_paths:
   - 'vendor'
   - 'db/migrate'

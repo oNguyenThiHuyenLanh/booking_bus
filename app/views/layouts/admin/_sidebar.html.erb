@@ -29,10 +29,6 @@
             <%= link_to t("admin.sidebar.addModel"), new_admin_model_bus_path,
               data: {turbolinks: "false"} %>
           </li>
-          <li>
-            <%= link_to t("admin.sidebar.statistic"), "#",
-              data: {turbolinks: "false"} %>
-          </li>
         </ul>
       </li>
       <li>
@@ -43,11 +39,7 @@
               data: {turbolinks: "false"} %>
           </li>
           <li>
-            <%= link_to t("admin.sidebar.addBus"), "#",
-              data: {turbolinks: "false"} %>
-          </li>
-          <li>
-            <%= link_to t("admin.sidebar.statistic"), "#",
+            <%= link_to t("admin.sidebar.addBus"), new_admin_bus_path,
               data: {turbolinks: "false"} %>
           </li>
         </ul>

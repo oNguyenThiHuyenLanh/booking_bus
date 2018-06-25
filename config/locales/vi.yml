@@ -244,6 +244,13 @@ vi:
         seats: "Số ghế"
         detail: "Chi tiết"
         model_id: "Mã mô hình"
+      new: "Tạo xe mới"
+      enter_input_name: "Điền tên của xe"
+      name: "Tên xe"
+      number_of_seats: "Số ghế"
+      number_of_floors: "Số tầng"
+      model: "Mô hình"
+      create_bus: "Tạo xe"
   devise:
     failure:
       user:
