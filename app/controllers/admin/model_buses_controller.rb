@@ -2,6 +2,10 @@ module Admin
   class ModelBusesController < BaseController
     before_action :check_params, :check_amount_of_seat, only: [:create]
 
+    def index
+      @model_buses = ModelBus.all
+    end
+
     def new; end
 
     def create

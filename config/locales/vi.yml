@@ -206,6 +206,7 @@ vi:
       booked_date: "Ngày đặt chỗ"
       price: "Giá vé ghế"
     model_bus:
+      title: "Danh sách mô hình"
       new: "Tạo mô hình xe mới"
       number_of_seats: "Số lượng ghế"
       number_of_floors: "Số tầng"
@@ -216,6 +217,14 @@ vi:
       remain-seats: "Số ghế còn lại"
       not_enough_seats: "Không đủ ghế"
       out_of_seat: "Hết chỗ"
+      table:
+        stt: "STT"
+        id: "Mã mô hình"
+        seats: "Số ghế"
+        detail: "Chi tiết"
+        floors: "Số tầng"
+        rows: "Số hàng"
+        cols: "Số cột"
     statistic:
       time: "Thời gian"
       total_revenue: "Tổng doanh thu"
