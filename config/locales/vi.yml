@@ -80,6 +80,8 @@ vi:
     create_model_bus:
       successfully: "Tạo mô hình xe thành công"
       unsuccessfully: "Tạo mô hình xe không thành công"
+    statistic:
+      unsuccessfully: "Không có dữ liệu"
   close: "Đóng"
   notification: "Thông báo đặt vé"
   date:
@@ -150,6 +152,7 @@ vi:
       detail: " Chi tiết"
       back: " Trở về"
       add_schedule: "Add schedule"
+      error: "Có lỗi xảy ra!"
       table:
         stt: "STT"
         origin: "Bến đi"
@@ -230,6 +233,7 @@ vi:
         cols: "Số cột"
       show: "Chi tiết mô hình"
     statistic:
+      label: "Thống kê doanh thu"
       time: "Thời gian"
       total_revenue: "Tổng doanh thu"
       select_types: "Chọn thống kê theo"
@@ -291,7 +295,6 @@ vi:
     introduction: "Xác nhận đặt vé thành công"
     booked_successfully:
       subject: "Đặt vé thành công"
-  user:
     user_info: "Thông tin người dùng"
     user_email: "Email"
     user_phone: "Số điện thoại"
@@ -306,3 +309,7 @@ vi:
         total: "Tổng tiền (vnd)"
         detail: "Chi tiết"
         bill_id: "Mã hóa đơn"
+  by: "Theo"
+  year: "Năm"
+  show: "Hiển thị"
+    

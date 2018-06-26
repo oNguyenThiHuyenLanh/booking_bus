@@ -2,8 +2,8 @@ module BillServices
   class CreateBill
     def initialize params = {}
       @seats_array = params[:seats_array]
-      @schedule = Schedule.find_by id: params[:schedule_id]
-      @user = User.find_by id: params[:user_id]
+      @schedule = params[:schedule]
+      @user = params[:user]
     end
 
     def perform

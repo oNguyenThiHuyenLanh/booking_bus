@@ -13,37 +13,53 @@
     <div class="filter-part">
       <div class="row">
         <div class="col-md-3">
-          <%= label "route_id",
-            t("admin.schedule.create.select_route") %>
-        </div>
-        <div class="col-md-3">
-          <%= select_tag :route_id, options_for_select(list_items(@routes)),
-            prompt: t("admin.schedule.create.select_sth") %>
+          <%= select_tag :route_statistic, options_for_select(list_items(@routes)),
+          class: "form-control" %>
         </div>
       </div>
+      <br>
       <div class="row">
         <div class="col-md-3">
-          <%= label_tag "route_id",
-            t("admin.statistic.select_types") %>
-        </div>
-        <div class="col-md-3">
-          <%= select_tag :select_type, options_for_select(list_type),
-            {prompt: t("admin.statistic.select_type")}%>
-        </div>
-        <div class="col-md-2" id="year">
-          <%= select_tag "select_year",
-            options_for_select(2015..2018),
-            {prompt: t("admin.statistic.select_year")} %>
+          <%= select_tag t("by"),
+            options_for_select(list_type),
+            class: "form-control",
+            id: "option_statistic" %>
         </div>
         <div class="col-md-2">
-          <button class="btn btn-primary" type="button">
-          <%= t "admin.statistic.submit" %>
-          </button>
+          <%= select_tag :select_year,
+            options_for_select(@list_of_year),
+            class: "form-control",
+            id: "year_statistic" %>
+        </div>
+        <div class="col-md-2">
+          <%= button_tag t("show"), {class: "btn btn-primary", id: "show-statistic"} %>
         </div>
       </div>
     </div>
   <div class="row">
-    <%= line_chart @data, xtitle: t("admin.statistic.time"),
-      ytitle: t("admin.statistic.total_revenue") %>
+    <div id="error_statistic" class="col-md-10 col-md-offset-1"></div>
+  </div>
+  <div id="show-statistic-chart" class="row">
+    <canvas id="myChart"></canvas>
+  </div>
+</div>
+
+<div class="modal fade" id="statistic_unsuccessfully" tabindex="-1" role="dialog"
+  aria-labelledby="myModalLabel" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"
+          aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"><%= t "notification" %></h4>
+      </div>
+      <div class="modal-body">
+        <p><%= t "message.statistic.unsuccessfully" %></p>
+      </div>
+      <div class="modal-footer">
+        <%= button_tag t("close"), class: "btn btn-default",
+          data: {dismiss: "modal"} %>
+      </div>
+    </div>
   </div>
 </div>

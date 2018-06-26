@@ -27,7 +27,7 @@ gem "devise"
 gem "jquery-validation-rails"
 gem "bootstrap-select-rails"
 gem "config"
-gem "chartkick"
+gem "chartjs-rails"
 
 group :development, :test do
   gem "pry"

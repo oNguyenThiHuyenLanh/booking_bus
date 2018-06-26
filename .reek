@@ -5,6 +5,8 @@ FeatureEnvy:
   exclude:
     - "User#bill_list"
     - "Admin::ModelBusesController#seat_location_params"
+    - "Route#statistic_by_month"
+    - "Route#statistic_by_year"
 UtilityFunction:
   exclude:
     - "User#name_element"
