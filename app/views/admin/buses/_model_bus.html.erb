@@ -30,9 +30,10 @@
       <% end %>
     </div>
     <div class="row text-center">
-      <%= link_to "#", class: "btn btn-primary create-frame" do %>
+      <button type="button" name="button" class="btn btn-primary create-frame"
+        data-model="<%= model_bus.id %>">
         <%= t "admin.bus.create_bus" %>
-      <% end %>
+      </button>
     </div>
   </div>
 </div>

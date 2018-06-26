@@ -115,6 +115,8 @@ vi:
       invalid_model: "Không tìm thấy mô hình!"
     success:
       create_success: "Thêm thành công!"
+    unsuccess:
+      create_unsuccess: "Thêm không thành công!"
     stt:
       now: "ĐANG ĐI"
       will_do: "SẮP ĐI"
@@ -251,6 +253,7 @@ vi:
       number_of_floors: "Số tầng"
       model: "Mô hình"
       create_bus: "Tạo xe"
+      empty_name: "Không để trống tên xe"
   devise:
     failure:
       user:
