@@ -16,6 +16,8 @@ module Admin
     def new; end
 
     def create
+      binding.pry
+
       model_bus = ModelBus.new model_bus_params
       return render json: {status: true} if model_bus.save
       render json: {status: false}
@@ -26,12 +28,14 @@ module Admin
     attr_reader :seat_location, :model_bus
 
     def check_params
+      binding.pry
       render json: {status: false} unless
         check_incase_first_floor || check_incase_second_floor
     end
 
     def check_amount_of_seat
       @seat_location = seat_location_params
+      binding.pry
       render json: {status: false} unless seat_location_params.count ==
                                           params[:amount_of_seats].to_i
     end

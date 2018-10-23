@@ -239,18 +239,18 @@ Interval.create!(name: "Chiều (12h-19h)")
 Interval.create!(name: "Tối (19h")
 
 User.create!(phone_number: "0989390159",
-  email: "a1k9lanh@gmail.com",
-  password: "anhquan96",
+  email: "nguyen.tuan.anhd@framgia.com",
+  password: "123456",
   admin: 1)
 
 User.create!(phone_number: "0902228931",
-  email: "lanh123@gmail.com",
-  password: "anhquan96",
-  admin: 0)
+  email: "nguyen.thi.huyen.lanh@framgia.com",
+  password: "123456",
+  admin: 1)
 
 User.create!(phone_number: "0965273896",
-  email: "nguyenleanhquan@gmail.com",
-  password: "anhquan96",
+  email: "tran.manh.hong@framgia.com",
+  password: "123456",
   admin: 1)
 
 User.create!(phone_number: "0944854132",

@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function() {
       }
     });
   });
-  $(document).on('click', '.create-frame-bus', function(){
+  $(document).on('click', '.create-bus', function(){
     var data_name = $('#input-name-bus').val();
     if(data_name == ''){
       alert(I18n.t('admin.bus.empty_name'));

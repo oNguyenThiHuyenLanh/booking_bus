@@ -52,7 +52,7 @@ $(document).ready(function() {
         + '</ul>'
         + '</div>';
       frame += '<div class="row text-center">'
-        + '<button type="button" id="create-model-bus" class="btn btn-primary create-frame">'
+        + '<button type="button" id="create-model-bus" class="btn btn-primary">'
         + I18n.t('admin.model_bus.create_model')
         + '</button>'
         + '</div>';
@@ -80,7 +80,7 @@ $(document).on('click','.seat-model', function(){
       if(floor == 1) {
         list_seat_first_floor.push(location);
       } else {
-        list_seat_second_floor.push(location);        
+        list_seat_second_floor.push(location);
       }
       remain_seats--;
     }

@@ -1,5 +1,5 @@
 slot_per_floor: 20
-min_seats: 30
+min_seats: 5
 max_seats: 60
 min_floors: 1
 max_floors: 2
