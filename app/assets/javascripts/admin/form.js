@@ -70,7 +70,7 @@ $(document).ready(function () {
             alert(I18n.t('admin.schedule.create.schedule_existed'));
           }
           else if (data.length == 0) {
-            alert(I18n.t('admin.schedule.create.no_bus')); 
+            alert(I18n.t('admin.schedule.create.no_bus'));
           }
           else {
             $('.tab-pane').hide();

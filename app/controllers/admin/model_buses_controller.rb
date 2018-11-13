@@ -1,56 +1,32 @@
 module Admin
   class ModelBusesController < BaseController
-    before_action :check_params, :check_amount_of_seat, only: [:create]
-
     def index
       @model_buses = ModelBus.all
     end
 
     def show
       @model_bus = ModelBus.find_by id: params[:id]
-      return if model_bus
-      flash[:danger] = t "admin.error.invalid_model"
-      redirect_to admin_model_buses_path
+      unless model_bus
+        flash[:danger] = t "admin.error.invalid_model"
+        redirect_to admin_model_buses_path
+      end
     end
 
     def new; end
 
     def create
-      binding.pry
-
       model_bus = ModelBus.new model_bus_params
-      return render json: {status: true} if model_bus.save
-      render json: {status: false}
+      if model_bus.save
+        flash[:success] = "Thêm mô hình thành công"
+      else
+        flash[:danger] = t "admin.error.invalid_model"
+      end
+      redirect_to admin_model_buses_path
     end
 
     private
 
     attr_reader :seat_location, :model_bus
-
-    def check_params
-      binding.pry
-      render json: {status: false} unless
-        check_incase_first_floor || check_incase_second_floor
-    end
-
-    def check_amount_of_seat
-      @seat_location = seat_location_params
-      binding.pry
-      render json: {status: false} unless seat_location_params.count ==
-                                          params[:amount_of_seats].to_i
-    end
-
-    def check_incase_first_floor
-      params[:list_seat_first_floor] && params[:amount_of_seats] &&
-        params[:number_of_floors] && params[:number_of_rows] &&
-        params[:number_of_columns]
-    end
-
-    def check_incase_second_floor
-      params[:list_seat_first_floor] && params[:list_seat_second_floor] &&
-        params[:amount_of_seats] && params[:number_of_floors] &&
-        params[:number_of_rows] && params[:number_of_columns]
-    end
 
     def model_bus_params
       {

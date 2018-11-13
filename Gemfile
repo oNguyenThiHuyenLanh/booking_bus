@@ -41,7 +41,6 @@ group :development, :test do
   gem "guard-rspec", require: false
   gem "database_cleaner"
   gem "brakeman", require: false
-  gem "jshint"
   gem "bundler-audit"
   gem "rubocop", "~> 0.35.0", require: false
   gem "rubocop-checkstyle_formatter", require: false

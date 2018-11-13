@@ -2,12 +2,16 @@ list_seat_first_floor = [];
 list_seat_second_floor = [];
 first_items = [];
 second_items = [];
+number_of_seats = 0;
+number_of_floors = 0;
+number_of_horizontal_line = 0;
+number_of_vertical_line = 0;
 $(document).ready(function() {
   $('.create-frame').click(function(){
-    var number_of_seats = $('#number_of_seats').val();
-    var number_of_floors = $('#number_of_floors').val();
-    var number_of_horizontal_line = $('#number_of_horizontal_line').val();
-    var number_of_vertical_line = $('#number_of_vertical_line').val();
+    number_of_seats = $('#number_of_seats').val();
+    number_of_floors = $('#number_of_floors').val();
+    number_of_horizontal_line = $('#number_of_horizontal_line').val();
+    number_of_vertical_line = $('#number_of_vertical_line').val();
     if(number_of_seats >
       number_of_floors * number_of_horizontal_line * number_of_vertical_line){
       alert(I18n.t('admin.model_bus.not_enough_seats'));
@@ -89,8 +93,8 @@ $(document).on('click','.seat-model', function(){
 });
 
 $(document).on('click', '#create-model-bus', function() {
-  let rows = $('#number_of_horizontal_line').val();
-  let columns = $('#number_of_vertical_line').val();
+  let rows = number_of_horizontal_line;
+  let columns = number_of_vertical_line;
   var number = 0;
   for (let i=1; i<=rows; i++) {
     for(let j=1; j<=columns; j++) {
@@ -129,14 +133,6 @@ $(document).on('click', '#create-model-bus', function() {
       number_of_floors: $('#number_of_floors').val(),
       number_of_rows: rows,
       number_of_columns: columns
-    },
-    success: function(dataResponse) {
-      if(dataResponse.status == true) {
-        $('#create_model_bus_successfully').modal({'show': true});
-      } else {
-        $('#create_model_bus_unsuccessfully').modal({'show': true});
-      }
-      setInterval(function(){ location.replace('/admin/schedules');}, 3000);
     }
   });
 });
