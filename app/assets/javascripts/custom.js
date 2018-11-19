@@ -61,7 +61,7 @@ $(document).ready(function() {
   });
 });
 
-$(document).on('turbolinks:load', function(){
+$(document).ready(function(){
   $('#search').click(function(){
     var data = $('#select2-origin_address-container').attr('title');
     sessionStorage.setItem('origin_address', data);
@@ -73,7 +73,7 @@ $(document).on('turbolinks:load', function(){
   $('li.booked').unbind('click');
 });
 
-$(document).on('turbolinks:load', function(){
+$(document).ready(function(){
   $('.book').click(function() {
     var id = $(this).attr('data-schedule');
     $('#schedule-' + id).toggle();

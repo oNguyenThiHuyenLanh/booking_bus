@@ -1,4 +1,5 @@
 vi:
+  profile: "Hồ sơ"
   app_name: "Đặt vé xe"
   home_page: "Trang chủ"
   payment: "Thanh toán"
@@ -61,7 +62,7 @@ vi:
   select-destination-address: "Chọn điểm đến"
   select-date: "Chọn ngày"
   select-interval: "Chọn khung giờ"
-  profile: "Thông tin người dùng"
+  user-profile: "Thông tin người dùng"
   booking-history: "Lịch sử đặt vé"
   select-seat: "Chọn chỗ"
   booking: "Đặt vé"

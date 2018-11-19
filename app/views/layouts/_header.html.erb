@@ -1,4 +1,4 @@
-<nav class="header-blue" style="min-height:90px;">
+<nav class="header-blue">
   <div class="container">
     <div class="row">
       <div class="col-md-3">
@@ -10,10 +10,40 @@
       </div>
       <div class="col-md-9 header-blue-right-menu pl0">
         <ul class="header-blue-menu-list">
-          <li><%= link_to t("contact"), "#" %></li>
-          <li><%= link_to t("guide"), "#" %></li>
-          <li><%= link_to t("payment"), "#" %></li>
-          <li><%= link_to t("home_page"), root_path %></li>
+          <% if user_signed_in? && current_user.admin %>
+            <li><%= link_to t("logout"), destroy_user_session_path, method: :delete %></li>
+            <li>
+              <%= link_to admin_schedules_path, target: "blank" do %>
+                <i class="fa fa-dashboard "></i>
+                <%= t "manage_pages" %>
+              <% end %>
+            </li>
+          <% else %>
+            <% if !user_signed_in? %>
+              <li><%= link_to t("login"), new_user_session_path %></li>
+            <% else %>
+              <li class="dropdown" >
+                <%= link_to t("profile"), class: "dropdown-toggle",	
+                  data: {toggle:"dropdown"} do %>	
+                  <%= t "profile" %><b class="caret"></b>	
+                <% end %>	
+                <ul class="dropdown-menu" style="left: -126px;">
+                  <li>
+                    <%= link_to t("user-profile"), user_path(current_user),
+                      style: "color: black" %>
+                  </li>	
+                  <li>
+                    <%= link_to t("logout"), destroy_user_session_path,
+                      method: :delete, style: "color: black" %>
+                  </li>	
+                </ul>
+              </li>
+            <% end %>
+            <li><%= link_to t("contact"), "#" %></li>
+            <li><%= link_to t("guide"), "#" %></li>
+            <li><%= link_to t("payment"), "#" %></li>
+            <li><%= link_to t("home_page"), root_path %></li>
+          <% end %>
         </ul>
       </div>
     </div>
