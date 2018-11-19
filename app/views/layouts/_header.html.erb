@@ -1,39 +1,21 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
+<nav class="header-blue" style="min-height:90px;">
   <div class="container">
-    <%= link_to t("app_name"), root_url, class: "logo" %>
-    <nav>
-      <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to t("home_page"), root_path %></li>
-        <li><%= link_to t("payment"), "#" %></li>
-        <li><%= link_to t("guide"), "#" %></li>
-        <li><%= link_to t("contact"), "#" %></li>
-        <% if user_signed_in? %>
-          <% if current_user.admin %>
-            <li>
-              <%= link_to admin_schedules_path, target: "blank" do %>
-                <i class="fa fa-dashboard "></i>
-                <%= t "manage_pages" %>
-              <% end %>
-            </li>
-          <% end %>
-          <li class="dropdown">
-            <%= link_to current_user.phone_number, class: "dropdown-toggle",
-              data: {toggle:"dropdown"} do %>
-              <%= current_user.phone_number %><b class="caret"></b>
-            <% end %>
-            <ul class="dropdown-menu">
-              <li><%= link_to t("profile"), user_path(current_user) %></li>
-              <li class="divider"></li>
-              <li>
-                <%= link_to t("logout"), destroy_user_session_path,
-                  method: :delete %>
-              </li>
-            </ul>
-          </li>
-        <% else %>
-          <li><%= link_to t("login"), new_user_session_url %></li>
-        <% end %>
-      </ul>
-    </nav>
+    <div class="row">
+      <div class="col-md-3">
+        <ul class="header-action-bar visible-sm visible-xs">
+          <li><a href="#" class="menu-action"><i class="fa fa-bars"></i></a></li>
+        </ul>
+      </div>
+      <div id="overlay-layout" style="position: fixed; width: 100%; height: 100%; background-color: #A6A6A6; opacity: 0.7; z-index: 99; margin-top: 7px; display: none;">
+      </div>
+      <div class="col-md-9 header-blue-right-menu pl0">
+        <ul class="header-blue-menu-list">
+          <li><%= link_to t("contact"), "#" %></li>
+          <li><%= link_to t("guide"), "#" %></li>
+          <li><%= link_to t("payment"), "#" %></li>
+          <li><%= link_to t("home_page"), root_path %></li>
+        </ul>
+      </div>
+    </div>
   </div>
-</header>
+</nav>
