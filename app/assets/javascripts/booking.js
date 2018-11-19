@@ -1,6 +1,6 @@
 const min = 3;
 
-$(document).on('turbolinks:load', function() {
+$(document).ready(function() {
   autoExpired();
 
   let minutes = 60 * min;

@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require rails-ujs
-//= require turbolinks
 //= require bootstrap-sprockets
 //= require bootstrap-select
 //= require jquery.validate
@@ -21,8 +20,8 @@
 //= require i18n/translations
 //= require_tree .
 
-document.addEventListener("turbolinks:load", function() {
+$(document).ready(function(){
   $('.disable_click').on('click', function(event) {
     event.preventDefault();
   })
-})
+});
