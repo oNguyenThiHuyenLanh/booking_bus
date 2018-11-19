@@ -10,11 +10,7 @@
   </head>
   <body>
     <%= render "layouts/header" %>
-    <div class="container shorter">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
     <%= yield %>
-    <%= render "layouts/footer" %>
     </div>
     <script type="text/javascript">
       I18n.defaultLocale = "<%= I18n.default_locale %>";

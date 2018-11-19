@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(document).ready(function() {
   $('.select-bus').on('change', function() {
     var data_seats = $('#bus_seats').val();
     var data_floors = $('#bus_floors').val();

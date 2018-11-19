@@ -1,63 +1,148 @@
-<h4><%= t "title" %></h4>
-<hr>
-<% if @addresses %>
-  <div class="form-booking">
+<div id="main" class="home-page">
+  <div class="container home-search-ticket-panel">
     <div class="row">
-      <div class="col-md-9 form">
-        <%= form_for :search, method: "get", html: {id: "search_form"},
-          url: schedules_url do |f| %>
-          <div class="row inline">
-            <div class="col-md-4">
-              <%= f.label :origin_address, t("origin_address") %>
-              <div>
-                <%= f.select "origin_address",
-                  options_from_collection_for_select(@addresses, "id", "city"),
-                  {include_blank: true},
-                  {class: "select-custom", id: "origin_address"} %>
-              </div>
-            </div>
-            <div class="col-md-2">
-              <i class="glyphicon glyphicon-transfer icon"></i>
-            </div>
-            <div class="col-md-4">
-              <%= f.label :destination, t("destination_address") %>
-              <div>
-                <%= f.select "destination_address",
-                  options_from_collection_for_select(@addresses, "id", "city"),
-                  {include_blank: true},
-                  {class: "select-custom", id: "destination_address"} %>
-              </div>
-            </div>
-          </div>
-          <div class="row inline">
-            <div class="col-md-4">
-              <%= f.label :date, t("date_of_department") %>
-                <label class="error" for="search_date" generate="true"
-                  style="display: block;"></label>
-                <div class="input-group date search-schedule" data-provide="datepicker">
-                  <%= f.text_field "date", class: "form-control", id: "search_date"%>
-                  <div class="input-group-addon">
-                      <span class="glyphicon glyphicon-th"></span>
+      <div class="col-md-12">
+        <div>
+          <h1>VeXeRe.com Hệ thống vé xe lớn nhất Việt Nam</h1>
+          <% if @addresses %>
+            <%= form_for :search, method: "get", html: {id: "search_form"},
+              url: schedules_url do |f| %>
+              <div class="row">
+                <div class="col-md-5 col-md-push-2">
+                  <%= f.label :origin_address, t("origin_address") %>
+                  <div>
+                    <%= f.select "origin_address",
+                      options_from_collection_for_select(@addresses, "id", "city"),
+                      {include_blank: true},
+                      {class: "select-custom", id: "origin_address"} %>
                   </div>
                 </div>
-            </div>
-            <div class="col-md-offset-2 col-md-4">
-              <%= f.label :interval, t("interval") %>
-              <div>
-                <%= f.select "interval",
-                  options_from_collection_for_select(@intervals, "id", "name"),
-                  {include_blank: true}, {class: "select-custom", id: "interval"} %>
+                <div class="col-md-2">
+                  <i class="glyphicon glyphicon-transfer icon"></i>
+                </div>
+                <div class="col-md-5">
+                  <%= f.label :destination, t("destination_address") %>
+                  <div>
+                    <%= f.select "destination_address",
+                      options_from_collection_for_select(@addresses, "id", "city"),
+                      {include_blank: true},
+                      {class: "select-custom", id: "destination_address"} %>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="row inline">
-            <div class="col-md-offset-6 col-md-4">
-              <%= f.submit t("search"),
-                {class: "btn btn-primary select-custom", id: "search"} %>
-            </div>
-          </div>
-        <% end %>
+              <div class="row">
+                <div class="col-md-5 col-md-push-2">
+                  <%= f.label :date, t("date_of_department") %>
+                    <label class="error" for="search_date" generate="true"
+                      style="display: block;"></label>
+                    <div class="input-group date search-schedule" data-provide="datepicker">
+                      <%= f.text_field "date", class: "form-control", id: "search_date"%>
+                      <div class="input-group-addon">
+                          <span class="glyphicon glyphicon-th"></span>
+                      </div>
+                    </div>
+                </div>
+                <div class="col-md-offset-2 col-md-5">
+                  <%= f.label :interval, t("interval") %>
+                  <div>
+                    <%= f.select "interval",
+                      options_from_collection_for_select(@intervals, "id", "name"),
+                      {include_blank: true}, {class: "select-custom", id: "interval"} %>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-offset-5 col-md-2">
+                  <%= f.submit t("search"),
+                    {class: "btn btn-primary select-custom", id: "search"} %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-<% end %>
+</div>
+<div class="hidden-sm hidden-xs">
+  <div class="route-search-panel">
+    <div id="routeSearch" class="odd-row clearfix">
+      <div class="content-inner">
+        <div class="clearfix"></div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs clearfix" role="tablist">
+          <li id="lisaigon" role="presentation" class="active"><a href="#saigon" aria-controls="home" role="tab" data-toggle="tab">SÀI GÒN</a></li>
+          <li id="lihanoi" role="presentation"><a href="#hanoi" aria-controls="profile" role="tab" data-toggle="tab">HÀ NỘI</a></li>
+          <li id="lidanang" role="presentation"><a href="#danang" aria-controls="messages" role="tab" data-toggle="tab">ĐÀ NẴNG</a></li>
+          <li id="linhatrang" role="presentation"><a href="#nhatrang" aria-controls="settings" role="tab" data-toggle="tab">NHA TRANG</a></li>
+          <li id="licantho" role="presentation"><a href="#cantho" aria-controls="settings" role="tab" data-toggle="tab">CẦN THƠ</a></li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div role="tabpanel" class="tab-pane fade in active" id="saigon">
+            <div class="clearfix">
+              <div class="col-md-6 pl0 pr0">
+                <ul class="routes-list">
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-ha-noi-129t1241.html"><span class="route fl"><small>Sài Gòn →</small> Hà Nội</span></a>
+                    <span class="price fl">900.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-ha-noi" data-param="129t1241.html" id="dp1542629616597"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-da-lat-lam-dong-129t23991.html"><span class="route fl"><small>Sài Gòn →</small> Đà Lạt</span></a>
+                    <span class="price fl">150.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-da-lat-lam-dong" data-param="129t23991.html" id="dp1542629616598"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-nha-trang-khanh-hoa-129t23591.html"><span class="route fl"><small>Sài Gòn →</small> Nha Trang</span></a>
+                    <span class="price fl">180.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-nha-trang-khanh-hoa" data-param="129t23591.html" id="dp1542629616599"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-da-nang-129t1151.html"><span class="route fl"><small>Sài Gòn →</small> Đà Nẵng</span></a>
+                    <span class="price fl">360.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-da-nang" data-param="129t1151.html" id="dp1542629616600"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-phnom-penh-campuchia-129t1491181.html"><span class="route fl"><small>Sài Gòn →</small> Phnôm Pênh</span></a>
+                    <span class="price fl">200.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-phnom-penh-campuchia" data-param="129t1491181.html" id="dp1542629616601"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6 pl0 pr0">
+                <ul class="routes-list">
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-mui-ne-binh-thuan-129t27071.html"><span class="route fl"><small>Sài Gòn →</small> Mũi Né</span></a>
+                    <span class="price fl">120.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-mui-ne-binh-thuan" data-param="129t27071.html" id="dp1542629616602"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-vung-tau-ba-ria-vung-tau-129t2131.html"><span class="route fl"><small>Sài Gòn →</small> Vũng Tàu</span></a>
+                    <span class="price fl">105.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-vung-tau-ba-ria-vung-tau" data-param="129t2131.html" id="dp1542629616603"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-khanh-hoa-129t1321.html"><span class="route fl"><small>Sài Gòn →</small> Khánh Hòa</span></a>
+                    <span class="price fl">185.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-khanh-hoa" data-param="129t1321.html" id="dp1542629616604"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-dak-lak-129t1161.html"><span class="route fl"><small>Sài Gòn →</small> Buôn Ma Thuột</span></a>
+                    <span class="price fl">200.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-dak-lak" data-param="129t1161.html" id="dp1542629616605"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                  <li>
+                    <a href="/vi-VN/ve-xe-khach-tu-sai-gon-di-rach-gia-kien-giang-129t23741.html"><span class="route fl"><small>Sài Gòn →</small> Rạch Giá - Kiên Giang</span></a>
+                    <span class="price fl">120.000 ₫/vé</span>
+                    <input class="input-txt selectDate hasDatepicker" type="hidden" data-url="/vi-VN/ve-xe-khach-tu-sai-gon-di-rach-gia-kien-giang" data-param="129t23741.html" id="dp1542629616606"><button type="button" class="ui-datepicker-trigger">Chọn ngày</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
