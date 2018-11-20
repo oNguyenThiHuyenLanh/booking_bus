@@ -8,6 +8,8 @@ class Route < ApplicationRecord
   has_many :pick_addresses, through: :route_pick_addresses
   has_many :bills, through: :schedules
 
+  scope :start_from, -> (address){where(origin_id: address.id)}
+
   def name
     origin.city + "-" + destination.city
   end
