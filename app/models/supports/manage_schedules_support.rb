@@ -1,6 +1,6 @@
 class Supports::ManageSchedulesSupport
   def schedules
-    @schedules ||= Schedule.all.order_by_date
+    @schedules ||= Schedule.includes(route: [:origin, :destination]).order_by_date
   end
 
   def intervals
