@@ -4,8 +4,8 @@
   <td><%= schedule.route.destination.city %></td>
   <td><%= l schedule.date, format: :date_month_year_concise %></td>
   <td><%= schedule.time_start %></td>
-  <td><%= schedule.time_spent/60.0 %><%= t "admin.schedule.table.hour" %></td>
-  <td><%= schedule.price %></td>
+  <td><%= (schedule.time_spent/60.0).floor %><%= t "admin.schedule.table.hour" %> <%= (schedule.time_spent%60.0).round %><%= t "admin.schedule.table.minute" %></td>
+  <td><%= schedule.price.round %></td>
   <td><%= schedule.date <= Date.current ? t("admin.schedule.status.done") :
     t("admin.schedule.status.doing") %></td>
   <td>

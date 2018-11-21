@@ -3,7 +3,7 @@ module Admin
     before_action :filter, only: :new
 
     def index
-      @buses = Bus.all
+      @buses = Bus.all.page(params[:page]).per(10)
     end
 
     def new

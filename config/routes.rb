@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: "addresses#index"
 
   namespace :admin do
-    root to: "schedules#index"
+    root "schedules#index"
     get "/bus/new"
     resources :schedules, only: [:index, :show, :new, :create]
     resources :model_buses, only: [:index, :show, :new, :create]

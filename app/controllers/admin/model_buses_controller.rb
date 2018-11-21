@@ -1,7 +1,7 @@
 module Admin
   class ModelBusesController < BaseController
     def index
-      @model_buses = ModelBus.all
+      @model_buses = ModelBus.all.page(params[:page]).per(10)
     end
 
     def show
