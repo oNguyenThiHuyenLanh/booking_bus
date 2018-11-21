@@ -1,7 +1,7 @@
 const min = 3;
 
 $(document).ready(function() {
-  autoExpired();
+  // autoExpired();
 
   let minutes = 60 * min;
 
@@ -76,17 +76,17 @@ function startTimer(duration, display) {
   }, 1000);
 }
 
-function autoExpired() {
-  timer = 60 * min;
+// function autoExpired() {
+//   timer = 60 * min;
 
-  var x = setInterval(function () {
-    minutes = parseInt(timer / 60, 10);
-    seconds = parseInt(timer % 60, 10);
+//   var x = setInterval(function () {
+//     minutes = parseInt(timer / 60, 10);
+//     seconds = parseInt(timer % 60, 10);
 
-    if (--timer < 0) {
-      clearInterval(x);
-      sessionStorage.clear();
-      location.href = '/';
-    }
-  }, 1000);
-}
+//     if (--timer < 0) {
+//       clearInterval(x);
+//       sessionStorage.clear();
+//       location.href = '/';
+//     }
+//   }, 1000);
+// }
