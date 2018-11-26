@@ -28,6 +28,7 @@ gem "jquery-validation-rails"
 gem "bootstrap-select-rails"
 gem "config"
 gem "chartjs-rails"
+gem "bullet"
 
 group :development, :test do
   gem "pry"

@@ -8,7 +8,7 @@ class Supports::ManageSchedulesSupport
   end
 
   def routes
-    @routes ||= Route.all
+    @routes ||= Route.all.includes(:origin, :destination)
   end
 
   def buses

@@ -244,24 +244,24 @@ Route.all.each do |route|
   end
 end
 
-puts "Seeds Bill"
-Schedule.all.each do |schedule|
-  numbers_of_ticket = rand(1..3)
-  Bill.create!(
-    total_price: numbers_of_ticket * schedule.price,
-    total_ticket: numbers_of_ticket,
-    schedule_id: schedule.id,
-    user_id: User.all.sample.id
-  )
-end
+# puts "Seeds Bill"
+# Schedule.all.each do |schedule|
+#   numbers_of_ticket = rand(1..3)
+#   Bill.create!(
+#     total_price: numbers_of_ticket * schedule.price,
+#     total_ticket: numbers_of_ticket,
+#     schedule_id: schedule.id,
+#     user_id: User.all.sample.id
+#   )
+# end
 
-puts "Seeds BookedSeat"
-Bill.all.each do |bill|
-  (1..bill.total_ticket).each do |m|
-    BookedSeat.create!(
-      no_of_seat: m,
-      bill_id: bill.id
-    )
-  end
-end
+# puts "Seeds BookedSeat"
+# Bill.all.each do |bill|
+#   (1..bill.total_ticket).each do |m|
+#     BookedSeat.create!(
+#       no_of_seat: m,
+#       bill_id: bill.id
+#     )
+#   end
+# end
 
