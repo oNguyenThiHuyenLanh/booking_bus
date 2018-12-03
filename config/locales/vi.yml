@@ -163,6 +163,7 @@ vi:
         time_end: "Giờ đến"
         time_during: "Thời gian đi"
         hour: " tiếng"
+        minute: " phút"
         price: "Giá (vnd)"
         stts: "Trạng thái"
         action: "Thao tác"
@@ -313,4 +314,3 @@ vi:
   by: "Theo"
   year: "Năm"
   show: "Hiển thị"
-    

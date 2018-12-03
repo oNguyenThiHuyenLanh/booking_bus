@@ -27,6 +27,9 @@
       <tbody class="schedule-table">
         <%= render @buses %>
       </tbody>
+      <div class="text-center">
+        <%= paginate @buses, theme: "twitter-bootstrap-3" %>
+      </div>
     </table>
   </div>
 </div>

@@ -29,6 +29,8 @@ gem "bootstrap-select-rails"
 gem "config"
 gem "chartjs-rails"
 gem "bullet"
+gem "kaminari"
+gem "bootstrap-kaminari-views"
 
 group :development, :test do
   gem "pry"

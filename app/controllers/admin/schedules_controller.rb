@@ -6,7 +6,7 @@ module Admin
     before_action :find_schedule, only: %i(show)
 
     def index
-      @support = Supports::ManageSchedulesSupport.new
+      @support = Supports::ManageSchedulesSupport.new(page: params[:page])
 
       respond_to do |format|
         format.html
