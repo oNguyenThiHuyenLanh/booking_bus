@@ -107,7 +107,7 @@ $(document).ready(function () {
   });
 });
 
-$(document).on('turbolinks:load', function () {
+$(document).ready(function () {
   $('#schedule_route_id').bind('change', function () {
     if ($(this).val() != undefined) {
       var route_id = $(this).val();
