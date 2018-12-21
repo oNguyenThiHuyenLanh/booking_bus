@@ -34,6 +34,8 @@ gem "bootstrap-kaminari-views"
 
 group :development, :test do
   gem "pry"
+  gem "pry-byebug"
+  gem "figaro"
   gem "capybara", "~> 2.13"
   gem "selenium-webdriver"
   gem "rspec"

@@ -8,7 +8,7 @@ class BookingController < ApplicationController
     if !current_user
       @user_gest = User.find_by(email: params[:email])
       unless @user_gest
-        @user_gest = User.create(email: params[:email], phone_number: params[:phone])
+        @user_gest = User.create!(email: params[:email], phone_number: params[:phone], password: "lalala", role: :guest)
       end
     end
     @schedule = Schedule.find_by id: params[:schedule_id]
