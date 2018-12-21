@@ -9,6 +9,7 @@ module BillServices
     def perform
       bill = Bill.new bill_params
       if bill.save
+        bill.update!(code: bill.bill_code)
         UserMailer.billing(@user).deliver_now
         return true
       else

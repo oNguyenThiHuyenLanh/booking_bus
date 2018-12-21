@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180504040232) do
+ActiveRecord::Schema.define(version: 20181213141906) do
 
   create_table "active_seat_coordinates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.integer "column"
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 20180504040232) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "schedule_id"
+    t.string "code"
     t.index ["deleted_at"], name: "index_bills_on_deleted_at"
     t.index ["schedule_id"], name: "index_bills_on_schedule_id"
     t.index ["user_id"], name: "index_bills_on_user_id"
