@@ -9,9 +9,9 @@
       "data-turbolinks-track": "reload" %>
   </head>
   <body>
-    <% unless request.url.include?('sign_in') || request.url.include?('sign_up') %>
+    <%# unless request.url.include?('sign_in') || request.url.include?('sign_up') %>
       <%= render "layouts/header" %>
-    <% end %>
+    <%# end %>
     <%= yield %>
     </div>
     <script type="text/javascript">
