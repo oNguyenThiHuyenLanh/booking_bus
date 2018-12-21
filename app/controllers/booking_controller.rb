@@ -1,10 +1,16 @@
 class BookingController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create]
+  # before_action :authenticate_user!, only: [:new, :create]
 
   def new; end
 
   def create
     seats_array = take_seat_data
+    if !current_user
+      @user_gest = User.find_by(email: params[:email])
+      unless @user_gest
+        @user_gest = User.create(email: params[:email], phone_number: params[:phone])
+      end
+    end
     @schedule = Schedule.find_by id: params[:schedule_id]
     if schedule && !schedule.seats_existed(seats_array)
       create_bill_and_respond
@@ -21,7 +27,7 @@ class BookingController < ApplicationController
     {
       seats_array: take_seat_data,
       schedule: schedule,
-      user: current_user
+      user: current_user || @user_gest
     }
   end
 

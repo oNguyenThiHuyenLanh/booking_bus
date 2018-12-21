@@ -3,12 +3,12 @@ const min = 3;
 $(document).ready(function() {
   // autoExpired();
 
-  let minutes = 60 * min;
+  // let minutes = 60 * min;
 
-  display = document.querySelector('#time');
-  if(display) {
-    startTimer(minutes, display);
-  }
+  // display = document.querySelector('#time');
+  // if(display) {
+  //   startTimer(minutes, display);
+  // }
 
   var temp = JSON.parse(sessionStorage.getItem('schedule'));
   if(temp) {
@@ -29,13 +29,19 @@ $(document).ready(function() {
   $('#booking').click(function() {
     var id = JSON.parse(sessionStorage.getItem('schedule')).id;
     var temp = JSON.parse(sessionStorage.getItem('schedule-' + id));
+    var name = document.getElementById('user_name').value
+    var phone = document.getElementById('user_phone_number').value
+    var email = document.getElementById('user_email').value
     $.ajax({
       url: '/booking',
       method: 'POST',
       authenticity_token: window.token,
       data: {
         schedule_id: id,
-        seats: temp.list_seat
+        seats: temp.list_seat,
+        name: name,
+        phone: phone,
+        email: email
       },
       success: function(dataResponse) {
         if(dataResponse.status == true) {
@@ -57,24 +63,24 @@ $(document).ready(function() {
   });
 });
 
-function startTimer(duration, display) {
-  var timer = duration;
-  var x = setInterval(function () {
-    var minutes = parseInt(timer / 60, 10);
-    var seconds = parseInt(timer % 60, 10);
+// function startTimer(duration, display) {
+//   var timer = duration;
+//   var x = setInterval(function () {
+//     var minutes = parseInt(timer / 60, 10);
+//     var seconds = parseInt(timer % 60, 10);
 
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
+//     minutes = minutes < 10 ? '0' + minutes : minutes;
+//     seconds = seconds < 10 ? '0' + seconds : seconds;
 
-    display.textContent = minutes + ':' + seconds;
+//     display.textContent = minutes + ':' + seconds;
 
-    if (--timer < 0) {
-      clearInterval(x);
-      sessionStorage.clear();
-      location.href = '/';
-    }
-  }, 1000);
-}
+//     if (--timer < 0) {
+//       clearInterval(x);
+//       sessionStorage.clear();
+//       location.href = '/';
+//     }
+//   }, 1000);
+// }
 
 // function autoExpired() {
 //   timer = 60 * min;
