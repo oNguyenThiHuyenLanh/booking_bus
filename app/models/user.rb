@@ -2,6 +2,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
     :recoverable, :rememberable, :validatable
   has_many :bills
+  enum role: [:guest, :customer, :employee, :manager, :admin]
 
   def bill_list
     data = bills.joins(schedule: :route).pluck("bills.id", "routes.origin_id",

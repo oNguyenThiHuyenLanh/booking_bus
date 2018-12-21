@@ -70,22 +70,26 @@ puts "Seeds User"
 User.create!(phone_number: "0989390159",
   email: "nguyen.tuan.anhd@framgia.com",
   password: "123456",
-  admin: 1)
+  admin: 1,
+  role: :admin)
 
 User.create!(phone_number: "0902228931",
   email: "nguyen.thi.huyen.lanh@framgia.com",
   password: "123456",
-  admin: 1)
+  admin: 1,
+  role: :admin)
 
 User.create!(phone_number: "0965273896",
   email: "tran.manh.hong@framgia.com",
   password: "123456",
-  admin: 1)
+  admin: 0,
+  role: :manager)
 
 User.create!(phone_number: "0944854132",
   email: "customer@framgia.com",
   password: "123456",
-  admin: 0)
+  admin: 0,
+  role: :customer)
 
 puts "Seeds ModelBus"
 ModelBus.create!(amount_of_seats: 40,
@@ -229,6 +233,8 @@ puts "Seeds Schedule"
 Route.all.each do |route|
   50.times do |day|
     (1..3).each do |hour|
+      origin = route.origin
+      destination = route.destination
       Schedule.create!(
         price: rand(100..300)*1000,
         date: Date.today() + day,
@@ -237,8 +243,8 @@ Route.all.each do |route|
         bus_id: Bus.all.sample.id,
         route_id: route.id,
         interval_id: hour,
-        start_station_id: (start_station_id = PickAddress.all.sample.id),
-        final_station_id: (PickAddress.all.ids - [start_station_id]).sample
+        start_station_id: (start_station_id = origin.pick_addresses.sample.id),
+        final_station_id: (final_station_id = destination.pick_addresses.sample.id)
       )
     end
   end

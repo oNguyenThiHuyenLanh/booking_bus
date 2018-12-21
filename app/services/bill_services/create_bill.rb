@@ -11,7 +11,6 @@ module BillServices
       if bill.save
         bill.update!(code: bill.bill_code)
         UserMailer.billing(@user).deliver_now
-        return true
       else
         return false
       end
