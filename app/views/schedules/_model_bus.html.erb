@@ -1,8 +1,11 @@
-<% (1..schedule.model_bus.number_of_floors).each do |floor| %>
+<% number_of_floors = schedule.model_bus.number_of_floors %>
+<% (1..number_of_floors).each do |floor| %>
   <div class="floor-bus">
-    <div class="title-floor" id="floor_<%= floor %>">
-      <label><%= t "floor"%> <%= floor %></label>
-    </div>
+    <% if number_of_floors == 2 %>
+      <div class="title-floor" id="floor_<%= floor %>">
+        <label><%= t "floor"%> <%= floor %></label>
+      </div>
+    <% end %>
     <table class="frame" data-schedule="<%= schedule.id %>">
       <% (1..schedule.model_bus.number_of_rows).each do |row| %>
         <tr class="bus-seat" id="row_<%= row %>">

@@ -2,9 +2,9 @@
   <div class="col-md-6">
     <p class="confirm-title"><%= t "confirm_booking" %></p>
   </div>
-  <div class="col-md-6">
+<!--   <div class="col-md-6">
     <h4 class="count-down" id="time"></h4>
-  </div>
+  </div> -->
 </div>
 <hr></hr>
 <div class="row">
@@ -15,17 +15,31 @@
       </div>
       <div class="customer-info">
         <div class="row">
-          <div class="col-md-4 info-wrap">
-            <%= t "phone-number" %>
+          <div class="col-md-6 info-wrap">
+            Họ tên
+            <input class="form-control" id="user_name" name="name" type="text"/>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4 info-wrap">
-            <%= t "email" %>
-          </div>
           <div class="col-md-6 info-wrap">
-            <input class="info" name="email" type="text"
+            <%= t "phone-number" %>
+            <% if current_user %>
+              <input class="form-control" id="user_phone_number" name="phone_number" type="text"
+                value="<%= current_user.phone_number %>"/>
+            <% else %>
+              <input class="form-control" id="user_phone_number" name="phone_number" type="text" />
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 info-wrap">
+            <%= t "email" %>
+            <% if current_user %>
+              <input class="form-control info" id="user_email" name="email" type="text"
               value="<%= current_user.email %>"/>
+            <% else %>
+              <input class="form-control info" id="user_email" name="email" type="text" />
+            <% end %>
           </div>
         </div>
       </div>
@@ -39,7 +53,7 @@
       </ul>
     </div>
     <div class="margin-top-10">
-      <button class="btn btn-primary btn-block" id="booking">
+      <button class="btn btn-primary btn-block" id="booking" type="submit">
         <%= t "booking" %></button>
     </div>
   </div>
