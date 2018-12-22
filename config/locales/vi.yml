@@ -1,14 +1,14 @@
 vi:
   log_in: "Đăng nhập"
   log_out: "Đăng xuất"
-  sign_up: "Đăng kí"
+  sign_up: "Đăng kí tài khoản"
   enter_username: "Điền tên đăng nhập"
   username: "Tên đăng nhập"
   enter_password: "Điền mật khẩu"
   password: "Mật khẩu"
   password_confirm: "Xác nhận mật khẩu"
   forgot_password: "Quên mật khẩu?"
-  welcome: "Chào mừng đến với Booking Bus!!!"
+  welcome: "Chào mừng đến với VeXeRe.com"
   send_reset_password: "Gửi mật khẩu cập nhật"
   submit: "Gửi"
   confirm_password: "Xác nhận mật khẩu mới"
@@ -309,7 +309,7 @@ vi:
         unit: "VND"
   bill_mailer:
     greeting: "Xin chào"
-    introduction: "Xác nhận đặt vé thành công"
+    introduction: "Xác nhận đặt vé thành công. Mã đặt vé của bạn là: VXR_00898. Vui lòng lưu lại mã để dùng cho check in khi lên xe."
     booked_successfully:
       subject: "Đặt vé thành công"
     user_info: "Thông tin người dùng"
