@@ -120,7 +120,8 @@
         <h4 class="modal-title" id="myModalLabel"><%= t "notification" %></h4>
       </div>
       <div class="modal-body">
-        <p><%= t "message.booking.successfully" %></p>
+        <p>Đặt vé thành công!
+        Quý khách vui lòng thanh toán trước <%= (Time.now + 45.minutes).strftime("%I:%M") %> ngày <%= (Time.now + 45.minutes).strftime("%d/%m/%Y") %>, sau thời gian này vé không thanh toán sẽ tự động hủy. Cảm ơn bạn đã sử dụng dịch vụ của VeXeRe.vn, chúng tôi sẽ gửi thông tin tới địa chỉ Email/SMS của bạn.</p>
       </div>
       <div class="modal-footer">
         <%= button_tag t("close"), class: "btn btn-default",

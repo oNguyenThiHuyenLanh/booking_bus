@@ -10,7 +10,7 @@ module BillServices
       bill = Bill.new bill_params
       if bill.save
         bill.update!(code: bill.bill_code)
-        UserMailer.billing(@user).deliver_now
+        UserMailer.billing(@user, bill).deliver_now
       else
         return false
       end
