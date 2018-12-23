@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :model_buses, only: [:index, :show, :new, :create]
     resources :buses, only: [:index, :new, :create]
     resources :statistics, only: [:index, :show]
+    resources :bills
   end
   devise_for :users
 
