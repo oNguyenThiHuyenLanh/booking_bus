@@ -1,0 +1,15 @@
+<tr>
+  <th scope="row"><%= bill_counter + 1 %></th>
+  <td><%= bill.code %></td>
+  <td><%= bill.schedule.origin_address %></td>
+  <td><%= bill.schedule.destination_address %></td>
+  <td><%= bill.total_price %></td>
+  <td><%= bill.total_ticket %></td>
+  <td></td>
+  <td></td>
+  <td>
+    <%= link_to admin_bill_path(id: bill.id), class: "detail-schedule" do %>
+      <%= content_tag :i, t("admin.schedule.detail"), class: "fa fa-list-alt" %>
+    <% end %>
+  </td>
+</tr>

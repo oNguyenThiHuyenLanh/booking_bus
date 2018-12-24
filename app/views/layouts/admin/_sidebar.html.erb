@@ -58,6 +58,19 @@
         </ul>
       </li>
       <li>
+        <%= dropdown_link("fa fa-wrench fa-fw", "order", "disable_click") %>
+        <ul class="nav nav-second-level collapse" id="order">
+          <li>
+            <%= link_to t("admin.sidebar.showSchedule"), admin_bills_path,
+              data: {turbolinks: "false"} %>
+          </li>
+          <li>
+            <%= link_to t("admin.sidebar.addSchedule"), new_admin_schedule_path,
+              data: {turbolinks: "false"} %>
+          </li>
+        </ul>
+      </li>
+      <li>
         <%= dropdown_link("fa fa-bar-chart-o fa-fw", "statistic",
           "disable_click") %>
         <ul class="nav nav-second-level collapse" id="statistic">
