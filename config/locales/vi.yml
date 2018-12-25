@@ -8,7 +8,7 @@ vi:
   password: "Mật khẩu"
   password_confirm: "Xác nhận mật khẩu"
   forgot_password: "Quên mật khẩu?"
-  welcome: "Chào mừng đến với VeXeRe.com"
+  welcome: "Chào mừng đến với DatVeXe.com"
   send_reset_password: "Gửi mật khẩu cập nhật"
   submit: "Gửi"
   confirm_password: "Xác nhận mật khẩu mới"
@@ -109,7 +109,7 @@ vi:
   time:
     formats:
       time_hour: "%H:%M"
-  manage_pages: "Quản lý trang"
+  manage_pages: "Quản lý"
   js:
     date:
       formats:
